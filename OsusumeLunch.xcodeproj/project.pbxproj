@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */; };
+		AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */; };
 		AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */; };
 		AE23AA9D1DA1FF2A000334D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */; };
 		AE23AAA01DA1FF2A000334D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AA9E1DA1FF2A000334D8 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */; };
 		AE23AAB31DA1FF2A000334D8 /* OsusumeLunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */; };
 		AE23AABE1DA1FF2A000334D8 /* OsusumeLunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */; };
+		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
+		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationViewControllerTests.swift; sourceTree = "<group>"; };
+		AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		AE23AA971DA1FF2A000334D8 /* OsusumeLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsusumeLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsusumeLunchUITests.swift; sourceTree = "<group>"; };
 		AE23AABF1DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
+		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +109,12 @@
 			children = (
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */,
+				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
 				AE23AAA91DA1FF2A000334D8 /* Info.plist */,
 				AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */,
 				AE23AA9E1DA1FF2A000334D8 /* Main.storyboard */,
 				AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */,
+				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
 				AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */,
 			);
 			path = OsusumeLunch;
@@ -113,8 +123,10 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
+				AE6739621DA23029000B384B /* Test Utilities */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */,
+				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 			);
 			path = OsusumeLunchTests;
 			sourceTree = "<group>";
@@ -126,6 +138,14 @@
 				AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */,
 			);
 			path = OsusumeLunchUITests;
+			sourceTree = "<group>";
+		};
+		AE6739621DA23029000B384B /* Test Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739631DA23063000B384B /* ConstraintChecker.swift */,
+			);
+			name = "Test Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
+				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
+				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
 				AE23AA9D1DA1FF2A000334D8 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */,
 				AE23AAB31DA1FF2A000334D8 /* OsusumeLunchTests.swift in Sources */,
+				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +542,7 @@
 				AE23AAC41DA1FF2A000334D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE23AAC51DA1FF2A000334D8 /* Build configuration list for PBXNativeTarget "OsusumeLunchTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +551,7 @@
 				AE23AAC71DA1FF2A000334D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE23AAC81DA1FF2A000334D8 /* Build configuration list for PBXNativeTarget "OsusumeLunchUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +560,7 @@
 				AE23AACA1DA1FF2A000334D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
