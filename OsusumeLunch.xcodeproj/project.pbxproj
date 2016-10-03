@@ -10,8 +10,6 @@
 		AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */; };
 		AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */; };
 		AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */; };
-		AE23AA9D1DA1FF2A000334D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */; };
-		AE23AAA01DA1FF2A000334D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AA9E1DA1FF2A000334D8 /* Main.storyboard */; };
 		AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */; };
 		AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */; };
 		AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */; };
@@ -43,8 +41,6 @@
 		AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		AE23AA971DA1FF2A000334D8 /* OsusumeLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsusumeLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE23AA9F1DA1FF2A000334D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE23AAA21DA1FF2A000334D8 /* OsusumeLunch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OsusumeLunch.xcdatamodel; sourceTree = "<group>"; };
 		AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE23AAA71DA1FF2A000334D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,14 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
-				AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */,
+				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
-				AE23AAA91DA1FF2A000334D8 /* Info.plist */,
-				AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */,
-				AE23AA9E1DA1FF2A000334D8 /* Main.storyboard */,
-				AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
-				AE23AA9C1DA1FF2A000334D8 /* ViewController.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -146,6 +137,17 @@
 				AE6739631DA23063000B384B /* ConstraintChecker.swift */,
 			);
 			name = "Test Utilities";
+			sourceTree = "<group>";
+		};
+		AE6739651DA24790000B384B /* Xcode Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */,
+				AE23AAA91DA1FF2A000334D8 /* Info.plist */,
+				AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */,
+				AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */,
+			);
+			name = "Xcode Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +262,6 @@
 			files = (
 				AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */,
 				AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */,
-				AE23AAA01DA1FF2A000334D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +290,6 @@
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
-				AE23AA9D1DA1FF2A000334D8 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,14 +327,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE23AA9E1DA1FF2A000334D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE23AA9F1DA1FF2A000334D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
