@@ -21,6 +21,8 @@
 		AE6739691DA335E3000B384B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739681DA335E3000B384B /* Restaurant.swift */; };
 		AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */; };
 		AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */; };
+		AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */; };
+		AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		AE6739681DA335E3000B384B /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepository.swift; sourceTree = "<group>"; };
+		AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethodsTests.swift"; sourceTree = "<group>"; };
+		AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
-				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
-				AE6739661DA335A6000B384B /* RestaurantRepository.swift */,
+				AE67396E1DA33E3D000B384B /* Repository */,
 				AE6739681DA335E3000B384B /* Restaurant.swift */,
-				AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */,
+				AE6739651DA24790000B384B /* Xcode Resources */,
+				AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -125,11 +129,12 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE6739621DA23029000B384B /* Test Utilities */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */,
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
-				AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */,
+				AE67396F1DA33E9A000B384B /* Repository */,
+				AE6739621DA23029000B384B /* Test Utilities */,
+				AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */,
 			);
 			path = OsusumeLunchTests;
 			sourceTree = "<group>";
@@ -160,6 +165,23 @@
 				AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */,
 			);
 			name = "Xcode Resources";
+			sourceTree = "<group>";
+		};
+		AE67396E1DA33E3D000B384B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */,
+				AE6739661DA335A6000B384B /* RestaurantRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		AE67396F1DA33E9A000B384B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */,
+			);
+			name = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +325,7 @@
 				AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */,
 				AE6739691DA335E3000B384B /* Restaurant.swift in Sources */,
 				AE6739671DA335A6000B384B /* RestaurantRepository.swift in Sources */,
+				AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
 			);
@@ -316,6 +339,7 @@
 				AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */,
 				AE23AAB31DA1FF2A000334D8 /* OsusumeLunchTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
+				AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
