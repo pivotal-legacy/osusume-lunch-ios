@@ -5,15 +5,15 @@ class RecommendationViewController: UIViewController {
 
     var recommendationButton = AutoLayoutButton()
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    init() {
+        super.init(nibName: nil, bundle: nil)
 
         self.setupButton()
         self.setupSubviews()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     private func setupButton() {

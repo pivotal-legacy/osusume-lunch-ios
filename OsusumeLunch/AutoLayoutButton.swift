@@ -9,9 +9,7 @@ class AutoLayoutButton: UIButton {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        self.setupAutoLayout()
+        return nil
     }
 
     private func setupAutoLayout() {
