@@ -32,9 +32,10 @@ class RecommendationViewController: UIViewController {
 
         let margins = self.view.layoutMarginsGuide
 
-        self.recommendationButton.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        self.recommendationButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.5).isActive = true
+
         self.recommendationButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         self.recommendationButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        self.recommendationButton.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        self.recommendationButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20).isActive = true
     }
 }
