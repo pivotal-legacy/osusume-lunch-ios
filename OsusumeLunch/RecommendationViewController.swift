@@ -4,6 +4,7 @@ import UIKit
 class RecommendationViewController: UIViewController {
 
     var recommendationButton = AutoLayoutButton()
+    var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -21,6 +22,12 @@ class RecommendationViewController: UIViewController {
         self.recommendationButton.setTitle("recommend", for: UIControlState.normal)
         self.recommendationButton.layer.borderColor = UIColor.black.cgColor
         self.recommendationButton.layer.borderWidth = 1.0
+
+        self.recommendationButton.addTarget(
+            self,
+            action: #selector(self.getRecommendation),
+            for: UIControlEvents.touchUpInside
+        )
     }
 
     private func setupSubviews() {
@@ -37,5 +44,9 @@ class RecommendationViewController: UIViewController {
         self.recommendationButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         self.recommendationButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         self.recommendationButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20).isActive = true
+    }
+
+    func getRecommendation() {
+        self.restaurantRepository.getRecommendation()
     }
 }

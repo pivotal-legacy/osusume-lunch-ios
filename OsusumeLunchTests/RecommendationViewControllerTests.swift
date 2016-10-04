@@ -4,11 +4,15 @@ import XCTest
 
 class RecommendationViewControllerTests: XCTestCase {
     var recommendationViewController: RecommendationViewController!
+    var fakeRestaurantRepository: FakeRestaurantRepository!
 
     override func setUp() {
         super.setUp()
 
+        self.fakeRestaurantRepository = FakeRestaurantRepository()
+
         self.recommendationViewController = RecommendationViewController()
+        self.recommendationViewController.restaurantRepository = self.fakeRestaurantRepository
     }
 
     func test_recommendationButtonHasCorrectLabel() {
@@ -28,5 +32,11 @@ class RecommendationViewControllerTests: XCTestCase {
         let totalConstraintCount = buttonConstraintCount + superviewConstraintCount
 
         XCTAssertTrue(totalConstraintCount == 4)
+    }
+
+    func test_tappingRecommendationButtonCallsGetRecommendation() {
+        self.recommendationViewController.recommendationButton.sendActions(for: UIControlEvents.touchUpInside)
+
+        XCTAssertTrue(self.fakeRestaurantRepository.getRecommendationWasCalled)
     }
 }
