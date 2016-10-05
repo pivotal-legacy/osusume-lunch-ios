@@ -1,9 +1,10 @@
 import Foundation
 import BrightFutures
+import Result
 
 class NetworkRestaurantRepository: RestaurantRepository {
 
-    let apiBase = "http://osusume-lunch.cfapps.io"
+    let apiBase = "https://osusume-lunch.cfapps.io"
 
     var networkSession: NetworkSession = URLSession()
     
@@ -11,7 +12,7 @@ class NetworkRestaurantRepository: RestaurantRepository {
         let promise = Promise<Restaurant, NSError>()
 
         let urlRequest = URLRequest.get(
-            urlString: self.apiBase + "/restaurants",
+            urlString: self.apiBase + "/restaurants/recommendation",
             headers: [String:String]()
         )
 

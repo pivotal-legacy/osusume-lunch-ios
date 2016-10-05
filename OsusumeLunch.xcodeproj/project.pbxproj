@@ -14,6 +14,7 @@
 		AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */; };
 		AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */; };
 		AE23AABE1DA1FF2A000334D8 /* OsusumeLunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */; };
+		AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
 		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
 		AE6739671DA335A6000B384B /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739661DA335A6000B384B /* RestaurantRepository.swift */; };
@@ -64,6 +65,7 @@
 		AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsusumeLunchUITests.swift; sourceTree = "<group>"; };
 		AE23AABF1DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutLabel.swift; sourceTree = "<group>"; };
 		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
 		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 		AE6739661DA335A6000B384B /* RestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
@@ -135,11 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				AE67398D1DA39BB6000B384B /* Extensions */,
+				AE2D75E21DA48DA700AD36CB /* LayoutComponents */,
 				AE67398C1DA39B81000B384B /* NetworkSession */,
 				AE67396E1DA33E3D000B384B /* Repository */,
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
-				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
 				AE6739681DA335E3000B384B /* Restaurant.swift */,
 			);
@@ -166,6 +168,15 @@
 				AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */,
 			);
 			path = OsusumeLunchUITests;
+			sourceTree = "<group>";
+		};
+		AE2D75E21DA48DA700AD36CB /* LayoutComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
+				AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */,
+			);
+			name = LayoutComponents;
 			sourceTree = "<group>";
 		};
 		AE6739621DA23029000B384B /* Test Utilities */ = {
@@ -406,6 +417,7 @@
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
+				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
 				AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */,
 				AE6739801DA352E6000B384B /* NetworkSession.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,

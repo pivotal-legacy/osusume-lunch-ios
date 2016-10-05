@@ -6,11 +6,11 @@ import BrightFutures
 class FakeRestaurantRepository: RestaurantRepository {
 
     var getRecommendationWasCalled = false
-    var getRecommendationReturnValue = Future<Restaurant, NSError>()
+    var getRecommendationReturnValue = Promise<Restaurant, NSError>()
 
     func getRecommendation() -> Future<Restaurant, NSError> {
         self.getRecommendationWasCalled = true
-        
-        return getRecommendationReturnValue
+
+        return getRecommendationReturnValue.future
     }
 }

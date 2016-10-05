@@ -4,6 +4,7 @@ import UIKit
 class RecommendationViewController: UIViewController {
 
     var recommendationButton = AutoLayoutButton()
+    var recommendationLabel = AutoLayoutLabel()
     var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
 
     init() {
@@ -32,6 +33,7 @@ class RecommendationViewController: UIViewController {
 
     private func setupSubviews() {
         self.view.addSubview(self.recommendationButton)
+        self.view.addSubview(self.recommendationLabel)
     }
 
     override func viewWillLayoutSubviews() {
@@ -40,13 +42,23 @@ class RecommendationViewController: UIViewController {
         let margins = self.view.layoutMarginsGuide
 
         self.recommendationButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.5).isActive = true
-
         self.recommendationButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         self.recommendationButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         self.recommendationButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20).isActive = true
+
+        self.recommendationLabel.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.25).isActive = true
+        self.recommendationLabel.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
+        self.recommendationLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        self.recommendationLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
     }
 
     func getRecommendation() {
         self.restaurantRepository.getRecommendation()
+            .onSuccess { restaurant in
+                self.recommendationLabel.text = restaurant.name
+            }
+            .onFailure { error in
+                self.recommendationLabel.text = "Not Found"
+            }
     }
 }
