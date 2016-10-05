@@ -1,5 +1,5 @@
 import Foundation
 
-class Restaurant {
-    
+struct Restaurant {
+    var name = ""
 }

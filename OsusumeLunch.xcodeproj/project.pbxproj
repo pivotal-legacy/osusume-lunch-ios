@@ -13,7 +13,6 @@
 		AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */; };
 		AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */; };
 		AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */; };
-		AE23AAB31DA1FF2A000334D8 /* OsusumeLunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */; };
 		AE23AABE1DA1FF2A000334D8 /* OsusumeLunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
 		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
@@ -23,6 +22,15 @@
 		AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */; };
 		AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */; };
 		AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */; };
+		AE6739771DA34C7D000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AE6739781DA34C7D000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
+		AE6739801DA352E6000B384B /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67397F1DA352E6000B384B /* NetworkSession.swift */; };
+		AE6739841DA3564C000B384B /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739831DA3564C000B384B /* FakeNetworkSession.swift */; };
+		AE6739861DA3588F000B384B /* URLSession+NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */; };
+		AE6739891DA37398000B384B /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739881DA37398000B384B /* URLSessionTests.swift */; };
+		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AE67398B1DA37803000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
+		AE67398F1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +60,6 @@
 		AE23AAA71DA1FF2A000334D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE23AAA91DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE23AAAE1DA1FF2A000334D8 /* OsusumeLunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsusumeLunchTests.swift; sourceTree = "<group>"; };
 		AE23AAB41DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsusumeLunchUITests.swift; sourceTree = "<group>"; };
@@ -65,6 +72,13 @@
 		AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethodsTests.swift"; sourceTree = "<group>"; };
 		AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
+		AE6739751DA34C7D000B384B /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		AE67397F1DA352E6000B384B /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		AE6739831DA3564C000B384B /* FakeNetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetworkSession.swift; sourceTree = "<group>"; };
+		AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
+		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
+		AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6739771DA34C7D000B384B /* BrightFutures.framework in Frameworks */,
+				AE6739781DA34C7D000B384B /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */,
+				AE67398B1DA37803000B384B /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +113,7 @@
 		AE23AA8E1DA1FF2A000334D8 = {
 			isa = PBXGroup;
 			children = (
+				AE6739741DA34C7D000B384B /* Frameworks */,
 				AE23AA991DA1FF2A000334D8 /* OsusumeLunch */,
 				AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */,
 				AE23AABC1DA1FF2A000334D8 /* OsusumeLunchUITests */,
@@ -115,13 +134,14 @@
 		AE23AA991DA1FF2A000334D8 /* OsusumeLunch */ = {
 			isa = PBXGroup;
 			children = (
+				AE67398D1DA39BB6000B384B /* Extensions */,
+				AE67398C1DA39B81000B384B /* NetworkSession */,
+				AE67396E1DA33E3D000B384B /* Repository */,
+				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
-				AE67396E1DA33E3D000B384B /* Repository */,
 				AE6739681DA335E3000B384B /* Restaurant.swift */,
-				AE6739651DA24790000B384B /* Xcode Resources */,
-				AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -129,12 +149,12 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
-				AE23AAB21DA1FF2A000334D8 /* OsusumeLunchTests.swift */,
-				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
+				AE67397A1DA34D3A000B384B /* Extensions */,
+				AE6739871DA37334000B384B /* NetworkSession */,
 				AE67396F1DA33E9A000B384B /* Repository */,
 				AE6739621DA23029000B384B /* Test Utilities */,
-				AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */,
+				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
+				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 			);
 			path = OsusumeLunchTests;
 			sourceTree = "<group>";
@@ -180,8 +200,52 @@
 			isa = PBXGroup;
 			children = (
 				AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */,
+				AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */,
 			);
 			name = Repository;
+			sourceTree = "<group>";
+		};
+		AE6739741DA34C7D000B384B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739751DA34C7D000B384B /* BrightFutures.framework */,
+				AE6739761DA34C7D000B384B /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE67397A1DA34D3A000B384B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AE6739871DA37334000B384B /* NetworkSession */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739831DA3564C000B384B /* FakeNetworkSession.swift */,
+				AE6739881DA37398000B384B /* URLSessionTests.swift */,
+			);
+			name = NetworkSession;
+			sourceTree = "<group>";
+		};
+		AE67398C1DA39B81000B384B /* NetworkSession */ = {
+			isa = PBXGroup;
+			children = (
+				AE67397F1DA352E6000B384B /* NetworkSession.swift */,
+				AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */,
+			);
+			name = NetworkSession;
+			sourceTree = "<group>";
+		};
+		AE67398D1DA39BB6000B384B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +258,7 @@
 				AE23AA931DA1FF2A000334D8 /* Sources */,
 				AE23AA941DA1FF2A000334D8 /* Frameworks */,
 				AE23AA951DA1FF2A000334D8 /* Resources */,
+				AE6739791DA34C91000B384B /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -315,6 +380,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AE6739791DA34C91000B384B /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE23AA931DA1FF2A000334D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,11 +407,13 @@
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */,
+				AE6739801DA352E6000B384B /* NetworkSession.swift in Sources */,
+				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
+				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
 				AE6739691DA335E3000B384B /* Restaurant.swift in Sources */,
 				AE6739671DA335A6000B384B /* RestaurantRepository.swift in Sources */,
 				AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */,
-				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
-				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
+				AE6739861DA3588F000B384B /* URLSession+NetworkSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,10 +422,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */,
+				AE6739841DA3564C000B384B /* FakeNetworkSession.swift in Sources */,
 				AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */,
-				AE23AAB31DA1FF2A000334D8 /* OsusumeLunchTests.swift in Sources */,
+				AE67398F1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
 				AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */,
+				AE6739891DA37398000B384B /* URLSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +564,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OsusumeLunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch;
@@ -489,6 +581,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OsusumeLunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch;
@@ -503,6 +599,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OsusumeLunchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTests;
@@ -518,6 +618,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OsusumeLunchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTests;

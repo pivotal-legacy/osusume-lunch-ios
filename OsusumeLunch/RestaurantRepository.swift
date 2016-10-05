@@ -1,5 +1,6 @@
 import Foundation
+import BrightFutures
 
 protocol RestaurantRepository {
-    func getRecommendation() -> Restaurant
+    func getRecommendation() -> Future<Restaurant, NSError>
 }
