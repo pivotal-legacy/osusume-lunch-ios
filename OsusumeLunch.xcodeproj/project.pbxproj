@@ -20,7 +20,7 @@
 		AE2D75E41DA4AB4600AD36CB /* launch screen image.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2D75E31DA4AB4600AD36CB /* launch screen image.png */; };
 		AE2D75EB1DA4CDB000AD36CB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D75EA1DA4CDB000AD36CB /* NotificationCenter.framework */; };
 		AE2D75EE1DA4CDB000AD36CB /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
-		AE2D75F51DA4CDB000AD36CB /* OsusumeLunchToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AE2D75F51DA4CDB000AD36CB /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2D75E91DA4CDB000AD36CB /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AE2D76111DA4E28500AD36CB /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
 		AE2D761A1DA4E28500AD36CB /* OsusumeNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE2D761E1DA4E28500AD36CB /* OsusumeNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,7 +126,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				AE2D75F51DA4CDB000AD36CB /* OsusumeLunchToday.appex in Embed App Extensions */,
+				AE2D75F51DA4CDB000AD36CB /* TodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,10 +160,10 @@
 		AE23AABF1DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutLabel.swift; sourceTree = "<group>"; };
 		AE2D75E31DA4AB4600AD36CB /* launch screen image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch screen image.png"; sourceTree = "<group>"; };
-		AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OsusumeLunchToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D75E91DA4CDB000AD36CB /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2D75EA1DA4CDB000AD36CB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecommendationViewController.swift; sourceTree = "<group>"; };
-		AE2D75F21DA4CDB000AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayRecommendationViewController.swift; path = ../TodayExtension/TodayRecommendationViewController.swift; sourceTree = "<group>"; };
+		AE2D75F21DA4CDB000AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../TodayExtension/Info.plist; sourceTree = "<group>"; };
 		AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OsusumeNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OsusumeNetworking.h; sourceTree = "<group>"; };
 		AE2D760B1DA4E28500AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,9 +185,9 @@
 		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionTests.swift; path = ../OsusumeNetworkingTests/URLSessionTests.swift; sourceTree = "<group>"; };
 		AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepositoryTests.swift; sourceTree = "<group>"; };
-		AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
-		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayRecommendationViewControllerTests.swift; path = ../TodayExtensionTests/TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
+		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../TodayExtensionTests/Info.plist; sourceTree = "<group>"; };
 		AEFDC4D91DA6444600F6B060 /* SharedTestUtilities.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTestUtilities.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFDC4DD1DA6444600F6B060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
@@ -276,13 +276,13 @@
 				AE6739741DA34C7D000B384B /* Frameworks */,
 				AE23AA991DA1FF2A000334D8 /* OsusumeLunch */,
 				AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */,
-				AE2D75EC1DA4CDB000AD36CB /* OsusumeLunchToday */,
-				AEBA5ACF1DA5E7BD00CC869A /* OsusumeLunchTodayTests */,
 				AE23AABC1DA1FF2A000334D8 /* OsusumeLunchUITests */,
 				AE2D76091DA4E28500AD36CB /* OsusumeNetworking */,
 				AE2D76161DA4E28500AD36CB /* OsusumeNetworkingTests */,
 				AE23AA981DA1FF2A000334D8 /* Products */,
 				AEFDC4DA1DA6444600F6B060 /* SharedTestUtilities */,
+				AE2D75EC1DA4CDB000AD36CB /* TodayExtension */,
+				AEBA5ACF1DA5E7BD00CC869A /* TodayExtensionTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,12 +291,12 @@
 			children = (
 				AE23AA971DA1FF2A000334D8 /* OsusumeLunch.app */,
 				AE23AAAE1DA1FF2A000334D8 /* OsusumeLunchTests.xctest */,
-				AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */,
-				AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */,
 				AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */,
 				AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */,
 				AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */,
 				AEFDC4D91DA6444600F6B060 /* SharedTestUtilities.xctest */,
+				AE2D75E91DA4CDB000AD36CB /* TodayExtension.appex */,
+				AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,13 +343,13 @@
 			name = LayoutComponents;
 			sourceTree = "<group>";
 		};
-		AE2D75EC1DA4CDB000AD36CB /* OsusumeLunchToday */ = {
+		AE2D75EC1DA4CDB000AD36CB /* TodayExtension */ = {
 			isa = PBXGroup;
 			children = (
 				AE2D75F21DA4CDB000AD36CB /* Info.plist */,
 				AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */,
 			);
-			path = OsusumeLunchToday;
+			path = TodayExtension;
 			sourceTree = "<group>";
 		};
 		AE2D76091DA4E28500AD36CB /* OsusumeNetworking */ = {
@@ -434,13 +434,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		AEBA5ACF1DA5E7BD00CC869A /* OsusumeLunchTodayTests */ = {
+		AEBA5ACF1DA5E7BD00CC869A /* TodayExtensionTests */ = {
 			isa = PBXGroup;
 			children = (
 				AEBA5AD21DA5E7BD00CC869A /* Info.plist */,
 				AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */,
 			);
-			path = OsusumeLunchTodayTests;
+			path = TodayExtensionTests;
 			sourceTree = "<group>";
 		};
 		AEFDC4DA1DA6444600F6B060 /* SharedTestUtilities */ = {
@@ -525,9 +525,9 @@
 			productReference = AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */ = {
+		AE2D75E81DA4CDB000AD36CB /* TodayExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "OsusumeLunchToday" */;
+			buildConfigurationList = AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "TodayExtension" */;
 			buildPhases = (
 				AE2D75E51DA4CDB000AD36CB /* Sources */,
 				AE2D75E61DA4CDB000AD36CB /* Frameworks */,
@@ -538,9 +538,9 @@
 			);
 			dependencies = (
 			);
-			name = OsusumeLunchToday;
+			name = TodayExtension;
 			productName = OsusumeLunchToday;
-			productReference = AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */;
+			productReference = AE2D75E91DA4CDB000AD36CB /* TodayExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		AE2D76071DA4E28500AD36CB /* OsusumeNetworking */ = {
@@ -581,9 +581,9 @@
 			productReference = AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AEBA5ACD1DA5E7BD00CC869A /* OsusumeLunchTodayTests */ = {
+		AEBA5ACD1DA5E7BD00CC869A /* TodayExtensionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "OsusumeLunchTodayTests" */;
+			buildConfigurationList = AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "TodayExtensionTests" */;
 			buildPhases = (
 				AEBA5ACA1DA5E7BD00CC869A /* Sources */,
 				AEBA5ACB1DA5E7BD00CC869A /* Frameworks */,
@@ -594,9 +594,9 @@
 			dependencies = (
 				AEBA5AD41DA5E7BD00CC869A /* PBXTargetDependency */,
 			);
-			name = OsusumeLunchTodayTests;
+			name = TodayExtensionTests;
 			productName = OsusumeLunchTodayTests;
-			productReference = AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */;
+			productReference = AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AEFDC4D81DA6444600F6B060 /* SharedTestUtilities */ = {
@@ -691,10 +691,10 @@
 				AE23AA961DA1FF2A000334D8 /* OsusumeLunch */,
 				AE23AAAD1DA1FF2A000334D8 /* OsusumeLunchTests */,
 				AE23AAB81DA1FF2A000334D8 /* OsusumeLunchUITests */,
-				AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */,
+				AE2D75E81DA4CDB000AD36CB /* TodayExtension */,
 				AE2D76071DA4E28500AD36CB /* OsusumeNetworking */,
 				AE2D760F1DA4E28500AD36CB /* OsusumeNetworkingTests */,
-				AEBA5ACD1DA5E7BD00CC869A /* OsusumeLunchTodayTests */,
+				AEBA5ACD1DA5E7BD00CC869A /* TodayExtensionTests */,
 				AEFDC4D81DA6444600F6B060 /* SharedTestUtilities */,
 			);
 		};
@@ -914,7 +914,7 @@
 		};
 		AE2D75F41DA4CDB000AD36CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */;
+			target = AE2D75E81DA4CDB000AD36CB /* TodayExtension */;
 			targetProxy = AE2D75F31DA4CDB000AD36CB /* PBXContainerItemProxy */;
 		};
 		AE2D76131DA4E28500AD36CB /* PBXTargetDependency */ = {
@@ -1159,9 +1159,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = OsusumeLunchToday/Info.plist;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.OsusumeLunchToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1176,9 +1176,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = OsusumeLunchToday/Info.plist;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.OsusumeLunchToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1285,9 +1285,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = OsusumeLunchTodayTests/Info.plist;
+				INFOPLIST_FILE = TodayExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTodayTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.TodayExtensionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
@@ -1303,9 +1303,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = OsusumeLunchTodayTests/Info.plist;
+				INFOPLIST_FILE = TodayExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTodayTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.TodayExtensionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
@@ -1387,7 +1387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "OsusumeLunchToday" */ = {
+		AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE2D75F61DA4CDB000AD36CB /* Debug */,
@@ -1414,7 +1414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "OsusumeLunchTodayTests" */ = {
+		AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "TodayExtensionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AEBA5AD51DA5E7BD00CC869A /* Debug */,
@@ -1430,6 +1430,7 @@
 				AEFDC4E11DA6444600F6B060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

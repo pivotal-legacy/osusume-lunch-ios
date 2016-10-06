@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
-               BuildableName = "OsusumeLunchToday.appex"
-               BlueprintName = "OsusumeLunchToday"
+               BuildableName = "TodayExtension.appex"
+               BlueprintName = "TodayExtension"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,8 +58,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AEBA5ACD1DA5E7BD00CC869A"
-               BuildableName = "OsusumeLunchTodayTests.xctest"
-               BlueprintName = "OsusumeLunchTodayTests"
+               BuildableName = "TodayExtensionTests.xctest"
+               BlueprintName = "TodayExtensionTests"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -78,8 +78,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
-            BuildableName = "OsusumeLunchToday.appex"
-            BlueprintName = "OsusumeLunchToday"
+            BuildableName = "TodayExtension.appex"
+            BlueprintName = "TodayExtension"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -103,8 +103,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
-            BuildableName = "OsusumeLunchToday.appex"
-            BlueprintName = "OsusumeLunchToday"
+            BuildableName = "TodayExtension.appex"
+            BlueprintName = "TodayExtension"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -112,8 +112,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
-            BuildableName = "OsusumeLunchToday.appex"
-            BlueprintName = "OsusumeLunchToday"
+            BuildableName = "TodayExtension.appex"
+            BlueprintName = "TodayExtension"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

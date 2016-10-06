@@ -43,8 +43,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AEBA5ACD1DA5E7BD00CC869A"
-               BuildableName = "OsusumeLunchTodayTests.xctest"
-               BlueprintName = "OsusumeLunchTodayTests"
+               BuildableName = "TodayExtensionTests.xctest"
+               BlueprintName = "TodayExtensionTests"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </TestableReference>
