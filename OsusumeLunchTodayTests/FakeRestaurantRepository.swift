@@ -14,4 +14,12 @@ class FakeRestaurantRepository: RestaurantRepository {
 
         return getRecommendationReturnValue.future
     }
+    
+    var getAllRestaurantsWasCalled = false
+    var getAllRestaurantsReturnValue = Promise<[Restaurant], NSError>()
+    func getAllRestaurants() -> Future<[Restaurant], NSError> {
+        self.getAllRestaurantsWasCalled = true
+        return self.getAllRestaurantsReturnValue.future
+    }
 }
+

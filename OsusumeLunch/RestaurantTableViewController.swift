@@ -1,6 +1,9 @@
 import UIKit
+import OsusumeNetworking
 
 class RestaurantTableViewController: UITableViewController {
+
+    var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -32,4 +32,26 @@ class NetworkRestaurantRepositoryTests: XCTestCase {
 
         self.waitForExpectations(timeout: 2, handler: nil)
     }
+
+    func test_getAllRestaurants_returnsRestaurants() {
+        let expectedRestaurants = [
+            ["name":"Afuri"],
+            ["name":"Pizzakaya"],
+        ]
+
+        self.promise.success(["restaurants":expectedRestaurants])
+
+        let future = self.repository.getAllRestaurants()
+
+        let expectation = self.expectation(description: "complete expectation")
+
+        future.onComplete(callback: { result in
+            expectation.fulfill()
+            XCTAssertEqual(result.value!.count, 2)
+            XCTAssertEqual(result.value![0].name, "Afuri")
+            XCTAssertEqual(result.value![1].name, "Pizzakaya")
+        })
+
+        self.waitForExpectations(timeout: 2, handler: nil)
+    }
 }
