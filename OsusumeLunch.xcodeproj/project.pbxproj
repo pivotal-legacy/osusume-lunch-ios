@@ -40,6 +40,7 @@
 		AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
 		AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */; };
 		AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */; };
+		AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
 		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
 		AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */; };
@@ -164,6 +165,7 @@
 		AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetworkSession.swift; sourceTree = "<group>"; };
 		AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 		AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
+		AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
 		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 		AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				AE67396F1DA33E9A000B384B /* Repository */,
 				AE6739621DA23029000B384B /* Test Utilities */,
+				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 			);
@@ -793,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */,
 				AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */,
 				AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,

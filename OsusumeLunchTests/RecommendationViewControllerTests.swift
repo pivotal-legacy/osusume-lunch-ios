@@ -51,6 +51,15 @@ class RecommendationViewControllerTests: XCTestCase {
         XCTAssertTrue(totalConstraintCount == 4)
     }
 
+
+    func test_navigationBarHasListButton() {
+        self.recommendationViewController.viewWillLayoutSubviews()
+
+        let rightBarButton = self.recommendationViewController.navigationItem.rightBarButtonItem
+
+        XCTAssertEqual(rightBarButton?.accessibilityIdentifier, "show restaurants button")
+    }
+
     func test_tappingRecommendationButtonDisplaysTextInLabelOnSuccess() {
         let expectedRestaurantName = "Butagumi"
         

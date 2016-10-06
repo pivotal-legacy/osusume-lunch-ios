@@ -4,6 +4,7 @@ import OsusumeNetworking
 
 class RecommendationViewController: UIViewController {
 
+    // MARK: - Properties
     var recommendationButton = AutoLayoutButton()
     var recommendationLabel = AutoLayoutLabel()
     var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
@@ -11,32 +12,16 @@ class RecommendationViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
+        self.setupNavigationItems()
         self.setupButton()
-        self.setupSubviews()
+        self.addSubviews()
     }
 
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
 
-    private func setupButton() {
-        self.recommendationButton.setTitleColor(UIColor.black, for: UIControlState.normal)
-        self.recommendationButton.setTitle("recommend", for: UIControlState.normal)
-        self.recommendationButton.layer.borderColor = UIColor.black.cgColor
-        self.recommendationButton.layer.borderWidth = 1.0
-
-        self.recommendationButton.addTarget(
-            self,
-            action: #selector(self.getRecommendation),
-            for: UIControlEvents.touchUpInside
-        )
-    }
-
-    private func setupSubviews() {
-        self.view.addSubview(self.recommendationButton)
-        self.view.addSubview(self.recommendationLabel)
-    }
-
+    // MARK: - View Lifecycle
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
@@ -53,6 +38,31 @@ class RecommendationViewController: UIViewController {
         self.recommendationLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
     }
 
+    // MARK: - Setup Subviews
+    private func setupNavigationItems() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: self, action: #selector(self.showRestaurants))
+        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "show restaurants button"
+    }
+
+    private func setupButton() {
+        self.recommendationButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+        self.recommendationButton.setTitle("recommend", for: UIControlState.normal)
+        self.recommendationButton.layer.borderColor = UIColor.black.cgColor
+        self.recommendationButton.layer.borderWidth = 1.0
+
+        self.recommendationButton.addTarget(
+            self,
+            action: #selector(self.getRecommendation),
+            for: UIControlEvents.touchUpInside
+        )
+    }
+
+    private func addSubviews() {
+        self.view.addSubview(self.recommendationButton)
+        self.view.addSubview(self.recommendationLabel)
+    }
+
+    // MARK: - Actions
     func getRecommendation() {
         self.restaurantRepository.getRecommendation()
             .onSuccess { restaurant in
@@ -61,5 +71,9 @@ class RecommendationViewController: UIViewController {
             .onFailure { error in
                 self.recommendationLabel.text = "Not Found"
             }
+    }
+
+    func showRestaurants() {
+
     }
 }

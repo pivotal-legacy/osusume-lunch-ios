@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow()
 
-        self.window?.rootViewController = RecommendationViewController()
+        self.setInitialViewController(window: self.window!)
 
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
@@ -42,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+
+    func setInitialViewController(window: UIWindow) {
+        let navigationController = UINavigationController(rootViewController: RecommendationViewController())
+
+        window.rootViewController = navigationController
     }
 
     // MARK: - Core Data stack
