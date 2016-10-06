@@ -48,6 +48,16 @@
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AEFDC4D81DA6444600F6B060"
+               BuildableName = "SharedTestUtilities.xctest"
+               BlueprintName = "SharedTestUtilities"
+               ReferencedContainer = "container:OsusumeLunch.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

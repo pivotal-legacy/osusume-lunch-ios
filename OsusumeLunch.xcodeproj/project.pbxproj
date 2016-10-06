@@ -38,14 +38,10 @@
 		AE2D763F1DA4EAB400AD36CB /* NetworkRestaurantRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */; };
 		AE2D76411DA4EBD300AD36CB /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */; };
 		AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
-		AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */; };
-		AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */; };
 		AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */; };
 		AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */; };
 		AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
-		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
-		AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */; };
 		AE6739771DA34C7D000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE6739781DA34C7D000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
@@ -54,6 +50,14 @@
 		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AEBA5ADB1DA5EA4800CC869A /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
+		AEFDC4E41DA6445700F6B060 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */; };
+		AEFDC4E51DA6446100F6B060 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */; };
+		AEFDC4E61DA6447200F6B060 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */; };
+		AEFDC4E81DA6449F00F6B060 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRestaurantRepository.swift */; };
+		AEFDC4E91DA644B500F6B060 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRestaurantRepository.swift */; };
+		AEFDC4EA1DA644B700F6B060 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRestaurantRepository.swift */; };
+		AEFDC4EB1DA644CF00F6B060 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AEFDC4EC1DA644CF00F6B060 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,13 @@
 			remoteInfo = OsusumeNetworking;
 		};
 		AEBA5AD31DA5E7BD00CC869A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE23AA961DA1FF2A000334D8;
+			remoteInfo = OsusumeLunch;
+		};
+		AEFDC4DE1DA6444600F6B060 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
 			proxyType = 1;
@@ -165,14 +176,10 @@
 		AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
 		AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
 		AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetworkSession.swift; sourceTree = "<group>"; };
-		AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
-		AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewControllerTests.swift; sourceTree = "<group>"; };
 		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
-		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
-		AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URLRequest+HttpMethodsTests.swift"; path = "../OsusumeNetworkingTests/URLRequest+HttpMethodsTests.swift"; sourceTree = "<group>"; };
 		AE6739751DA34C7D000B384B /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -181,6 +188,10 @@
 		AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
 		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFDC4D91DA6444600F6B060 /* SharedTestUtilities.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTestUtilities.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFDC4DD1DA6444600F6B060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
+		AEFDC4E71DA6449F00F6B060 /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +258,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEFDC4D61DA6444600F6B060 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFDC4EB1DA644CF00F6B060 /* BrightFutures.framework in Frameworks */,
+				AEFDC4EC1DA644CF00F6B060 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -262,6 +282,7 @@
 				AE2D76091DA4E28500AD36CB /* OsusumeNetworking */,
 				AE2D76161DA4E28500AD36CB /* OsusumeNetworkingTests */,
 				AE23AA981DA1FF2A000334D8 /* Products */,
+				AEFDC4DA1DA6444600F6B060 /* SharedTestUtilities */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +296,7 @@
 				AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */,
 				AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */,
 				AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */,
+				AEFDC4D91DA6444600F6B060 /* SharedTestUtilities.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,8 +317,6 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE67396F1DA33E9A000B384B /* Repository */,
-				AE6739621DA23029000B384B /* Test Utilities */,
 				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
@@ -366,30 +386,6 @@
 			name = Repository;
 			sourceTree = "<group>";
 		};
-		AE51CEE31DA5ED5F00AB45B1 /* Test Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */,
-			);
-			name = "Test Utilities";
-			sourceTree = "<group>";
-		};
-		AE51CEE61DA5EE5D00AB45B1 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */,
-			);
-			name = Repository;
-			sourceTree = "<group>";
-		};
-		AE6739621DA23029000B384B /* Test Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				AE6739631DA23063000B384B /* ConstraintChecker.swift */,
-			);
-			name = "Test Utilities";
-			sourceTree = "<group>";
-		};
 		AE6739651DA24790000B384B /* Xcode Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,14 +396,6 @@
 				AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */,
 			);
 			name = "Xcode Resources";
-			sourceTree = "<group>";
-		};
-		AE67396F1DA33E9A000B384B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */,
-			);
-			name = Repository;
 			sourceTree = "<group>";
 		};
 		AE6739741DA34C7D000B384B /* Frameworks */ = {
@@ -449,12 +437,20 @@
 		AEBA5ACF1DA5E7BD00CC869A /* OsusumeLunchTodayTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE51CEE61DA5EE5D00AB45B1 /* Repository */,
-				AE51CEE31DA5ED5F00AB45B1 /* Test Utilities */,
 				AEBA5AD21DA5E7BD00CC869A /* Info.plist */,
 				AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */,
 			);
 			path = OsusumeLunchTodayTests;
+			sourceTree = "<group>";
+		};
+		AEFDC4DA1DA6444600F6B060 /* SharedTestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */,
+				AEFDC4E71DA6449F00F6B060 /* FakeRestaurantRepository.swift */,
+				AEFDC4DD1DA6444600F6B060 /* Info.plist */,
+			);
+			path = SharedTestUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +599,24 @@
 			productReference = AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AEFDC4D81DA6444600F6B060 /* SharedTestUtilities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEFDC4E21DA6444600F6B060 /* Build configuration list for PBXNativeTarget "SharedTestUtilities" */;
+			buildPhases = (
+				AEFDC4D51DA6444600F6B060 /* Sources */,
+				AEFDC4D61DA6444600F6B060 /* Frameworks */,
+				AEFDC4D71DA6444600F6B060 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEFDC4DF1DA6444600F6B060 /* PBXTargetDependency */,
+			);
+			name = SharedTestUtilities;
+			productName = SharedTestUtilities;
+			productReference = AEFDC4D91DA6444600F6B060 /* SharedTestUtilities.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -653,6 +667,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = AE23AA961DA1FF2A000334D8;
 					};
+					AEFDC4D81DA6444600F6B060 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9G43X93F7Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE23AA961DA1FF2A000334D8;
+					};
 				};
 			};
 			buildConfigurationList = AE23AA921DA1FF2A000334D8 /* Build configuration list for PBXProject "OsusumeLunch" */;
@@ -675,6 +695,7 @@
 				AE2D76071DA4E28500AD36CB /* OsusumeNetworking */,
 				AE2D760F1DA4E28500AD36CB /* OsusumeNetworkingTests */,
 				AEBA5ACD1DA5E7BD00CC869A /* OsusumeLunchTodayTests */,
+				AEFDC4D81DA6444600F6B060 /* SharedTestUtilities */,
 			);
 		};
 /* End PBXProject section */
@@ -726,6 +747,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AEBA5ACC1DA5E7BD00CC869A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFDC4D71DA6444600F6B060 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -792,10 +820,10 @@
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
-				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
+				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,8 +832,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */,
-				AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */,
-				AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */,
+				AEFDC4E51DA6446100F6B060 /* ConstraintChecker.swift in Sources */,
+				AEFDC4E91DA644B500F6B060 /* FakeRestaurantRepository.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
 				AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */,
 			);
@@ -855,10 +883,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */,
-				AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */,
+				AEFDC4E61DA6447200F6B060 /* ConstraintChecker.swift in Sources */,
+				AEFDC4EA1DA644B700F6B060 /* FakeRestaurantRepository.swift in Sources */,
 				AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */,
 				AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFDC4D51DA6444600F6B060 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFDC4E41DA6445700F6B060 /* ConstraintChecker.swift in Sources */,
+				AEFDC4E81DA6449F00F6B060 /* FakeRestaurantRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,6 +936,11 @@
 			isa = PBXTargetDependency;
 			target = AE23AA961DA1FF2A000334D8 /* OsusumeLunch */;
 			targetProxy = AEBA5AD31DA5E7BD00CC869A /* PBXContainerItemProxy */;
+		};
+		AEFDC4DF1DA6444600F6B060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE23AA961DA1FF2A000334D8 /* OsusumeLunch */;
+			targetProxy = AEFDC4DE1DA6444600F6B060 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1270,6 +1312,42 @@
 			};
 			name = Release;
 		};
+		AEFDC4E01DA6444600F6B060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SharedTestUtilities/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.SharedTestUtilities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Debug;
+		};
+		AEFDC4E11DA6444600F6B060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SharedTestUtilities/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.SharedTestUtilities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1344,6 +1422,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AEFDC4E21DA6444600F6B060 /* Build configuration list for PBXNativeTarget "SharedTestUtilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFDC4E01DA6444600F6B060 /* Debug */,
+				AEFDC4E11DA6444600F6B060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
