@@ -2,6 +2,6 @@ import Foundation
 
 import BrightFutures
 
-protocol NetworkSession {
+public protocol NetworkSession {
     func dataTask(request: URLRequest) -> Future<NSDictionary, NSError>
 }

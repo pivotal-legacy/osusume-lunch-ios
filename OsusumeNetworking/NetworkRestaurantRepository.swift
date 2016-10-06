@@ -2,13 +2,17 @@ import Foundation
 import BrightFutures
 import Result
 
-class NetworkRestaurantRepository: RestaurantRepository {
+public class NetworkRestaurantRepository: NSObject, RestaurantRepository {
 
     let apiBase = "https://osusume-lunch.cfapps.io"
 
-    var networkSession: NetworkSession = URLSession()
+    override public init() {
+        super.init()
+    }
+
+    public var networkSession: NetworkSession = URLSession()
     
-    func getRecommendation() -> Future<Restaurant, NSError> {
+    public func getRecommendation() -> Future<Restaurant, NSError> {
         let promise = Promise<Restaurant, NSError>()
 
         let urlRequest = URLRequest.get(

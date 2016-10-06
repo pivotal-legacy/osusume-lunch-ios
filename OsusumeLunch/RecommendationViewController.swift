@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import OsusumeNetworking
 
 class RecommendationViewController: UIViewController {
 

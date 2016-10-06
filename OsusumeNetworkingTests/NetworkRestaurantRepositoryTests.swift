@@ -2,7 +2,7 @@ import XCTest
 import BrightFutures
 import Result
 
-@testable import OsusumeLunch
+@testable import OsusumeNetworking
 
 class NetworkRestaurantRepositoryTests: XCTestCase {
     var promise = Promise<NSDictionary, NSError>()

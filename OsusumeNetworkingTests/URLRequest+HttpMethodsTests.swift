@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import OsusumeLunch
+@testable import OsusumeNetworking
 
 class URLRequest_HttpMethodsTests: XCTestCase {
     

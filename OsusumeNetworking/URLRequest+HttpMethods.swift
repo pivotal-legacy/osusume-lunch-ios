@@ -1,7 +1,7 @@
 import Foundation
 
 extension URLRequest {
-    static func get(urlString: String, headers: [String: String]) -> URLRequest? {
+    public static func get(urlString: String, headers: [String: String]) -> URLRequest? {
         guard let url = URL(string: urlString) else {
             return nil
         }

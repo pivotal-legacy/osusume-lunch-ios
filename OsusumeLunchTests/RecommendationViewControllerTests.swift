@@ -1,5 +1,6 @@
 import XCTest
 import BrightFutures
+import OsusumeNetworking
 
 @testable import OsusumeLunch
 

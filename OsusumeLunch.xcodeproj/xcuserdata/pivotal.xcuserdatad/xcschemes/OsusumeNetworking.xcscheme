@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-               BuildableName = "OsusumeLunch.app"
-               BlueprintName = "OsusumeLunch"
+               BlueprintIdentifier = "AE2D76071DA4E28500AD36CB"
+               BuildableName = "OsusumeNetworking.framework"
+               BlueprintName = "OsusumeNetworking"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,26 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE23AAAD1DA1FF2A000334D8"
-               BuildableName = "OsusumeLunchTests.xctest"
-               BlueprintName = "OsusumeLunchTests"
-               ReferencedContainer = "container:OsusumeLunch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE23AAB81DA1FF2A000334D8"
-               BuildableName = "OsusumeLunchUITests.xctest"
-               BlueprintName = "OsusumeLunchUITests"
+               BlueprintIdentifier = "AE2D760F1DA4E28500AD36CB"
+               BuildableName = "OsusumeNetworkingTests.xctest"
+               BlueprintName = "OsusumeNetworkingTests"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -63,9 +52,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-            BuildableName = "OsusumeLunch.app"
-            BlueprintName = "OsusumeLunch"
+            BlueprintIdentifier = "AE2D76071DA4E28500AD36CB"
+            BuildableName = "OsusumeNetworking.framework"
+            BlueprintName = "OsusumeNetworking"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,23 +71,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-            BuildableName = "OsusumeLunch.app"
-            BlueprintName = "OsusumeLunch"
+            BlueprintIdentifier = "AE2D76071DA4E28500AD36CB"
+            BuildableName = "OsusumeNetworking.framework"
+            BlueprintName = "OsusumeNetworking"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "BASE_URL"
-            value = "https://osusume-lunch.cfapps.io"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -108,16 +89,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-            BuildableName = "OsusumeLunch.app"
-            BlueprintName = "OsusumeLunch"
+            BlueprintIdentifier = "AE2D76071DA4E28500AD36CB"
+            BuildableName = "OsusumeNetworking.framework"
+            BlueprintName = "OsusumeNetworking"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

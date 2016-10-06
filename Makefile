@@ -14,8 +14,13 @@ printArt:
 sort:
 	perl ./bin/sortXcodeProject OsusumeLunch.xcodeproj/project.pbxproj
 
-units:
+units: osusumeUnits networkingUnits
+
+osusumeUnits:
 	@xcodebuild -project OsusumeLunch.xcodeproj -scheme "OsusumeLunch" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.0,name=iPhone 7" build test
+
+networkingUnits:
+	@xcodebuild -project OsusumeLunch.xcodeproj -scheme "OsusumeNetworking" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.0,name=iPhone 7" build test
 
 update:
 	@carthage update --platform iOS

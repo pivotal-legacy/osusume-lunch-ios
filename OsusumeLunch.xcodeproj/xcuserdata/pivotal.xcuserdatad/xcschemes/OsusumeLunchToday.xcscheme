@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0800"
-   version = "1.3">
+   wasCreatedForAppExtension = "YES"
+   version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
+               BuildableName = "OsusumeLunchToday.appex"
+               BlueprintName = "OsusumeLunchToday"
+               ReferencedContainer = "container:OsusumeLunch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -26,26 +41,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE23AAAD1DA1FF2A000334D8"
-               BuildableName = "OsusumeLunchTests.xctest"
-               BlueprintName = "OsusumeLunchTests"
-               ReferencedContainer = "container:OsusumeLunch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE23AAB81DA1FF2A000334D8"
-               BuildableName = "OsusumeLunchUITests.xctest"
-               BlueprintName = "OsusumeLunchUITests"
+               BlueprintIdentifier = "AE2D760F1DA4E28500AD36CB"
+               BuildableName = "OsusumeNetworkingTests.xctest"
+               BlueprintName = "OsusumeNetworkingTests"
                ReferencedContainer = "container:OsusumeLunch.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -63,9 +67,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-            BuildableName = "OsusumeLunch.app"
-            BlueprintName = "OsusumeLunch"
+            BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
+            BuildableName = "OsusumeLunchToday.appex"
+            BlueprintName = "OsusumeLunchToday"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -74,31 +78,35 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "2">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE23AA961DA1FF2A000334D8"
-            BuildableName = "OsusumeLunch.app"
-            BlueprintName = "OsusumeLunch"
+            BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
+            BuildableName = "OsusumeLunchToday.appex"
+            BlueprintName = "OsusumeLunchToday"
             ReferencedContainer = "container:OsusumeLunch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "BASE_URL"
-            value = "https://osusume-lunch.cfapps.io"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AE2D75E81DA4CDB000AD36CB"
+            BuildableName = "OsusumeLunchToday.appex"
+            BlueprintName = "OsusumeLunchToday"
+            ReferencedContainer = "container:OsusumeLunch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -107,7 +115,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

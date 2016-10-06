@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>OsusumeLunchToday.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>OsusumeNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +33,26 @@
 			<true/>
 		</dict>
 		<key>AE23AAB81DA1FF2A000334D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE2D75E81DA4CDB000AD36CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE2D76071DA4E28500AD36CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE2D760F1DA4E28500AD36CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEBA5ACD1DA5E7BD00CC869A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

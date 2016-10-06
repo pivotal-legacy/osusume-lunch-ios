@@ -3,7 +3,7 @@ import BrightFutures
 
 extension URLSession: NetworkSession {
 
-    func dataTask(request: URLRequest) -> Future<NSDictionary, NSError> {
+    public func dataTask(request: URLRequest) -> Future<NSDictionary, NSError> {
         let promise = Promise<NSDictionary, NSError>()
 
          URLSession.shared.dataTask(

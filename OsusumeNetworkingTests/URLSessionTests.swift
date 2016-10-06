@@ -1,7 +1,7 @@
 import XCTest
 import BrightFutures
 
-@testable import OsusumeLunch
+@testable import OsusumeNetworking
 
 class URLSessionTests: XCTestCase {
     var urlSession: URLSession!

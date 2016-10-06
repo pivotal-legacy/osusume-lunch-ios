@@ -14,25 +14,43 @@
 		AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */; };
 		AE23AAA81DA1FF2A000334D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA61DA1FF2A000334D8 /* LaunchScreen.storyboard */; };
 		AE23AABE1DA1FF2A000334D8 /* OsusumeLunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AABD1DA1FF2A000334D8 /* OsusumeLunchUITests.swift */; };
+		AE261C731DA4EC5F0035FBF8 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AE261C741DA4EC5F0035FBF8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */; };
 		AE2D75E41DA4AB4600AD36CB /* launch screen image.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2D75E31DA4AB4600AD36CB /* launch screen image.png */; };
+		AE2D75EB1DA4CDB000AD36CB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D75EA1DA4CDB000AD36CB /* NotificationCenter.framework */; };
+		AE2D75EE1DA4CDB000AD36CB /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
+		AE2D75F51DA4CDB000AD36CB /* OsusumeLunchToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AE2D76111DA4E28500AD36CB /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
+		AE2D761A1DA4E28500AD36CB /* OsusumeNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE2D761E1DA4E28500AD36CB /* OsusumeNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE2D76311DA4E31800AD36CB /* NetworkRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D762B1DA4E31800AD36CB /* NetworkRestaurantRepository.swift */; };
+		AE2D76321DA4E31800AD36CB /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D762C1DA4E31800AD36CB /* NetworkSession.swift */; };
+		AE2D76331DA4E31800AD36CB /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D762D1DA4E31800AD36CB /* Restaurant.swift */; };
+		AE2D76341DA4E31800AD36CB /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D762E1DA4E31800AD36CB /* RestaurantRepository.swift */; };
+		AE2D76351DA4E31800AD36CB /* URLRequest+HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */; };
+		AE2D76361DA4E31800AD36CB /* URLSession+NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */; };
+		AE2D76371DA4E34A00AD36CB /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AE2D76381DA4E34A00AD36CB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
+		AE2D76391DA4E35A00AD36CB /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
+		AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */; };
+		AE2D763D1DA4EA8A00AD36CB /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739881DA37398000B384B /* URLSessionTests.swift */; };
+		AE2D763F1DA4EAB400AD36CB /* NetworkRestaurantRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */; };
+		AE2D76411DA4EBD300AD36CB /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */; };
+		AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
+		AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */; };
+		AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
 		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
-		AE6739671DA335A6000B384B /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739661DA335A6000B384B /* RestaurantRepository.swift */; };
-		AE6739691DA335E3000B384B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739681DA335E3000B384B /* Restaurant.swift */; };
 		AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */; };
-		AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */; };
-		AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */; };
-		AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */; };
 		AE6739771DA34C7D000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE6739781DA34C7D000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
-		AE6739801DA352E6000B384B /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67397F1DA352E6000B384B /* NetworkSession.swift */; };
-		AE6739841DA3564C000B384B /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739831DA3564C000B384B /* FakeNetworkSession.swift */; };
-		AE6739861DA3588F000B384B /* URLSession+NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */; };
-		AE6739891DA37398000B384B /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739881DA37398000B384B /* URLSessionTests.swift */; };
 		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE67398B1DA37803000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
-		AE67398F1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */; };
+		AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */; };
+		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
+		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
+		AEBA5ADB1DA5EA4800CC869A /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +68,67 @@
 			remoteGlobalIDString = AE23AA961DA1FF2A000334D8;
 			remoteInfo = OsusumeLunch;
 		};
+		AE2D75F31DA4CDB000AD36CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE2D75E81DA4CDB000AD36CB;
+			remoteInfo = OsusumeLunchToday;
+		};
+		AE2D76121DA4E28500AD36CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE2D76071DA4E28500AD36CB;
+			remoteInfo = OsusumeNetworking;
+		};
+		AE2D76141DA4E28500AD36CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE23AA961DA1FF2A000334D8;
+			remoteInfo = OsusumeLunch;
+		};
+		AE2D761B1DA4E28500AD36CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE2D76071DA4E28500AD36CB;
+			remoteInfo = OsusumeNetworking;
+		};
+		AEBA5AD31DA5E7BD00CC869A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE23AA8F1DA1FF2A000334D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE23AA961DA1FF2A000334D8;
+			remoteInfo = OsusumeLunch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE2D75F91DA4CDB000AD36CB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AE2D75F51DA4CDB000AD36CB /* OsusumeLunchToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D76221DA4E28500AD36CB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE2D761E1DA4E28500AD36CB /* OsusumeNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationViewControllerTests.swift; sourceTree = "<group>"; };
@@ -68,21 +146,35 @@
 		AE23AABF1DA1FF2A000334D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutLabel.swift; sourceTree = "<group>"; };
 		AE2D75E31DA4AB4600AD36CB /* launch screen image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch screen image.png"; sourceTree = "<group>"; };
+		AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OsusumeLunchToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D75EA1DA4CDB000AD36CB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecommendationViewController.swift; sourceTree = "<group>"; };
+		AE2D75F21DA4CDB000AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OsusumeNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OsusumeNetworking.h; sourceTree = "<group>"; };
+		AE2D760B1DA4E28500AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D76191DA4E28500AD36CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2D762B1DA4E31800AD36CB /* NetworkRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepository.swift; sourceTree = "<group>"; };
+		AE2D762C1DA4E31800AD36CB /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		AE2D762D1DA4E31800AD36CB /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		AE2D762E1DA4E31800AD36CB /* RestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
+		AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
+		AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
+		AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetworkSession.swift; sourceTree = "<group>"; };
+		AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
+		AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
 		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
-		AE6739661DA335A6000B384B /* RestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
-		AE6739681DA335E3000B384B /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
-		AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepository.swift; sourceTree = "<group>"; };
-		AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethodsTests.swift"; sourceTree = "<group>"; };
-		AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
+		AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URLRequest+HttpMethodsTests.swift"; path = "../OsusumeNetworkingTests/URLRequest+HttpMethodsTests.swift"; sourceTree = "<group>"; };
 		AE6739751DA34C7D000B384B /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		AE67397F1DA352E6000B384B /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
-		AE6739831DA3564C000B384B /* FakeNetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetworkSession.swift; sourceTree = "<group>"; };
-		AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
-		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
+		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionTests.swift; path = ../OsusumeNetworkingTests/URLSessionTests.swift; sourceTree = "<group>"; };
 		AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantRepositoryTests.swift; sourceTree = "<group>"; };
+		AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsusumeLunchTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
+		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +203,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE2D75E61DA4CDB000AD36CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D75EB1DA4CDB000AD36CB /* NotificationCenter.framework in Frameworks */,
+				AE2D76391DA4E35A00AD36CB /* OsusumeNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D76041DA4E28500AD36CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D76371DA4E34A00AD36CB /* BrightFutures.framework in Frameworks */,
+				AE2D76381DA4E34A00AD36CB /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D760D1DA4E28500AD36CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE261C731DA4EC5F0035FBF8 /* BrightFutures.framework in Frameworks */,
+				AE2D76111DA4E28500AD36CB /* OsusumeNetworking.framework in Frameworks */,
+				AE261C741DA4EC5F0035FBF8 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA5ACB1DA5E7BD00CC869A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */,
+				AEBA5ADB1DA5EA4800CC869A /* OsusumeNetworking.framework in Frameworks */,
+				AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,7 +250,11 @@
 				AE6739741DA34C7D000B384B /* Frameworks */,
 				AE23AA991DA1FF2A000334D8 /* OsusumeLunch */,
 				AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */,
+				AE2D75EC1DA4CDB000AD36CB /* OsusumeLunchToday */,
+				AEBA5ACF1DA5E7BD00CC869A /* OsusumeLunchTodayTests */,
 				AE23AABC1DA1FF2A000334D8 /* OsusumeLunchUITests */,
+				AE2D76091DA4E28500AD36CB /* OsusumeNetworking */,
+				AE2D76161DA4E28500AD36CB /* OsusumeNetworkingTests */,
 				AE23AA981DA1FF2A000334D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,7 +264,11 @@
 			children = (
 				AE23AA971DA1FF2A000334D8 /* OsusumeLunch.app */,
 				AE23AAAE1DA1FF2A000334D8 /* OsusumeLunchTests.xctest */,
+				AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */,
+				AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */,
 				AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */,
+				AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */,
+				AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,12 +278,9 @@
 			children = (
 				AE67398D1DA39BB6000B384B /* Extensions */,
 				AE2D75E21DA48DA700AD36CB /* LayoutComponents */,
-				AE67398C1DA39B81000B384B /* NetworkSession */,
-				AE67396E1DA33E3D000B384B /* Repository */,
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
-				AE6739681DA335E3000B384B /* Restaurant.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -153,8 +288,6 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE67397A1DA34D3A000B384B /* Extensions */,
-				AE6739871DA37334000B384B /* NetworkSession */,
 				AE67396F1DA33E9A000B384B /* Repository */,
 				AE6739621DA23029000B384B /* Test Utilities */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
@@ -181,6 +314,65 @@
 			name = LayoutComponents;
 			sourceTree = "<group>";
 		};
+		AE2D75EC1DA4CDB000AD36CB /* OsusumeLunchToday */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D75F21DA4CDB000AD36CB /* Info.plist */,
+				AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */,
+			);
+			path = OsusumeLunchToday;
+			sourceTree = "<group>";
+		};
+		AE2D76091DA4E28500AD36CB /* OsusumeNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D760B1DA4E28500AD36CB /* Info.plist */,
+				AE2D762B1DA4E31800AD36CB /* NetworkRestaurantRepository.swift */,
+				AE2D762C1DA4E31800AD36CB /* NetworkSession.swift */,
+				AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */,
+				AE2D762D1DA4E31800AD36CB /* Restaurant.swift */,
+				AE2D762E1DA4E31800AD36CB /* RestaurantRepository.swift */,
+				AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */,
+				AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */,
+			);
+			path = OsusumeNetworking;
+			sourceTree = "<group>";
+		};
+		AE2D76161DA4E28500AD36CB /* OsusumeNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE67397A1DA34D3A000B384B /* Extensions */,
+				AE6739871DA37334000B384B /* NetworkSession */,
+				AE2D763E1DA4EAA500AD36CB /* Repository */,
+				AE2D76191DA4E28500AD36CB /* Info.plist */,
+			);
+			path = OsusumeNetworkingTests;
+			sourceTree = "<group>";
+		};
+		AE2D763E1DA4EAA500AD36CB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		AE51CEE31DA5ED5F00AB45B1 /* Test Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */,
+			);
+			name = "Test Utilities";
+			sourceTree = "<group>";
+		};
+		AE51CEE61DA5EE5D00AB45B1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
 		AE6739621DA23029000B384B /* Test Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,20 +393,10 @@
 			name = "Xcode Resources";
 			sourceTree = "<group>";
 		};
-		AE67396E1DA33E3D000B384B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				AE67396C1DA33735000B384B /* NetworkRestaurantRepository.swift */,
-				AE6739661DA335A6000B384B /* RestaurantRepository.swift */,
-			);
-			name = Repository;
-			sourceTree = "<group>";
-		};
 		AE67396F1DA33E9A000B384B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */,
-				AE67398E1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -223,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6739751DA34C7D000B384B /* BrightFutures.framework */,
+				AE2D75EA1DA4CDB000AD36CB /* NotificationCenter.framework */,
 				AE6739761DA34C7D000B384B /* Result.framework */,
 			);
 			name = Frameworks;
@@ -234,35 +417,49 @@
 				AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */,
 			);
 			name = Extensions;
+			path = ../OsusumeLunchTests;
 			sourceTree = "<group>";
 		};
 		AE6739871DA37334000B384B /* NetworkSession */ = {
 			isa = PBXGroup;
 			children = (
-				AE6739831DA3564C000B384B /* FakeNetworkSession.swift */,
+				AE2D76401DA4EBD300AD36CB /* FakeNetworkSession.swift */,
 				AE6739881DA37398000B384B /* URLSessionTests.swift */,
 			);
 			name = NetworkSession;
-			sourceTree = "<group>";
-		};
-		AE67398C1DA39B81000B384B /* NetworkSession */ = {
-			isa = PBXGroup;
-			children = (
-				AE67397F1DA352E6000B384B /* NetworkSession.swift */,
-				AE6739851DA3588F000B384B /* URLSession+NetworkSession.swift */,
-			);
-			name = NetworkSession;
+			path = ../OsusumeLunchTests;
 			sourceTree = "<group>";
 		};
 		AE67398D1DA39BB6000B384B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AE6739721DA342F4000B384B /* URLRequest+HttpMethods.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		AEBA5ACF1DA5E7BD00CC869A /* OsusumeLunchTodayTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE51CEE61DA5EE5D00AB45B1 /* Repository */,
+				AE51CEE31DA5ED5F00AB45B1 /* Test Utilities */,
+				AEBA5AD21DA5E7BD00CC869A /* Info.plist */,
+				AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */,
+			);
+			path = OsusumeLunchTodayTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AE2D76051DA4E28500AD36CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D761A1DA4E28500AD36CB /* OsusumeNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AE23AA961DA1FF2A000334D8 /* OsusumeLunch */ = {
@@ -273,10 +470,14 @@
 				AE23AA941DA1FF2A000334D8 /* Frameworks */,
 				AE23AA951DA1FF2A000334D8 /* Resources */,
 				AE6739791DA34C91000B384B /* Carthage */,
+				AE2D75F91DA4CDB000AD36CB /* Embed App Extensions */,
+				AE2D76221DA4E28500AD36CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AE2D75F41DA4CDB000AD36CB /* PBXTargetDependency */,
+				AE2D761C1DA4E28500AD36CB /* PBXTargetDependency */,
 			);
 			name = OsusumeLunch;
 			productName = OsusumeLunch;
@@ -319,6 +520,80 @@
 			productReference = AE23AAB91DA1FF2A000334D8 /* OsusumeLunchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "OsusumeLunchToday" */;
+			buildPhases = (
+				AE2D75E51DA4CDB000AD36CB /* Sources */,
+				AE2D75E61DA4CDB000AD36CB /* Frameworks */,
+				AE2D75E71DA4CDB000AD36CB /* Resources */,
+				AE261C751DA4EE4B0035FBF8 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OsusumeLunchToday;
+			productName = OsusumeLunchToday;
+			productReference = AE2D75E91DA4CDB000AD36CB /* OsusumeLunchToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AE2D76071DA4E28500AD36CB /* OsusumeNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2D761F1DA4E28500AD36CB /* Build configuration list for PBXNativeTarget "OsusumeNetworking" */;
+			buildPhases = (
+				AE2D76031DA4E28500AD36CB /* Sources */,
+				AE2D76041DA4E28500AD36CB /* Frameworks */,
+				AE2D76051DA4E28500AD36CB /* Headers */,
+				AE2D76061DA4E28500AD36CB /* Resources */,
+				AE261C761DA4EE830035FBF8 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OsusumeNetworking;
+			productName = OsusumeNetworking;
+			productReference = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE2D760F1DA4E28500AD36CB /* OsusumeNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2D76231DA4E28500AD36CB /* Build configuration list for PBXNativeTarget "OsusumeNetworkingTests" */;
+			buildPhases = (
+				AE2D760C1DA4E28500AD36CB /* Sources */,
+				AE2D760D1DA4E28500AD36CB /* Frameworks */,
+				AE2D760E1DA4E28500AD36CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE2D76131DA4E28500AD36CB /* PBXTargetDependency */,
+				AE2D76151DA4E28500AD36CB /* PBXTargetDependency */,
+			);
+			name = OsusumeNetworkingTests;
+			productName = OsusumeNetworkingTests;
+			productReference = AE2D76101DA4E28500AD36CB /* OsusumeNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEBA5ACD1DA5E7BD00CC869A /* OsusumeLunchTodayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "OsusumeLunchTodayTests" */;
+			buildPhases = (
+				AEBA5ACA1DA5E7BD00CC869A /* Sources */,
+				AEBA5ACB1DA5E7BD00CC869A /* Frameworks */,
+				AEBA5ACC1DA5E7BD00CC869A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEBA5AD41DA5E7BD00CC869A /* PBXTargetDependency */,
+			);
+			name = OsusumeLunchTodayTests;
+			productName = OsusumeLunchTodayTests;
+			productReference = AEBA5ACE1DA5E7BD00CC869A /* OsusumeLunchTodayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,6 +621,29 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = AE23AA961DA1FF2A000334D8;
 					};
+					AE2D75E81DA4CDB000AD36CB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9G43X93F7Z;
+						ProvisioningStyle = Automatic;
+					};
+					AE2D76071DA4E28500AD36CB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9G43X93F7Z;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					AE2D760F1DA4E28500AD36CB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9G43X93F7Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE23AA961DA1FF2A000334D8;
+					};
+					AEBA5ACD1DA5E7BD00CC869A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9G43X93F7Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE23AA961DA1FF2A000334D8;
+					};
 				};
 			};
 			buildConfigurationList = AE23AA921DA1FF2A000334D8 /* Build configuration list for PBXProject "OsusumeLunch" */;
@@ -364,6 +662,10 @@
 				AE23AA961DA1FF2A000334D8 /* OsusumeLunch */,
 				AE23AAAD1DA1FF2A000334D8 /* OsusumeLunchTests */,
 				AE23AAB81DA1FF2A000334D8 /* OsusumeLunchUITests */,
+				AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */,
+				AE2D76071DA4E28500AD36CB /* OsusumeNetworking */,
+				AE2D760F1DA4E28500AD36CB /* OsusumeNetworkingTests */,
+				AEBA5ACD1DA5E7BD00CC869A /* OsusumeLunchTodayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -393,9 +695,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE2D75E71DA4CDB000AD36CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D76061DA4E28500AD36CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D760E1DA4E28500AD36CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA5ACC1DA5E7BD00CC869A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AE261C751DA4EE4B0035FBF8 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		AE261C761DA4EE830035FBF8 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		AE6739791DA34C91000B384B /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,14 +784,8 @@
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
-				AE67396D1DA33735000B384B /* NetworkRestaurantRepository.swift in Sources */,
-				AE6739801DA352E6000B384B /* NetworkSession.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
-				AE6739691DA335E3000B384B /* Restaurant.swift in Sources */,
-				AE6739671DA335A6000B384B /* RestaurantRepository.swift in Sources */,
-				AE6739731DA342F4000B384B /* URLRequest+HttpMethods.swift in Sources */,
-				AE6739861DA3588F000B384B /* URLSession+NetworkSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,12 +794,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */,
-				AE6739841DA3564C000B384B /* FakeNetworkSession.swift in Sources */,
 				AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */,
-				AE67398F1DA39D9E000B384B /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
-				AE6739711DA340EF000B384B /* URLRequest+HttpMethodsTests.swift in Sources */,
-				AE6739891DA37398000B384B /* URLSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +804,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE23AABE1DA1FF2A000334D8 /* OsusumeLunchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D75E51DA4CDB000AD36CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D75EE1DA4CDB000AD36CB /* TodayRecommendationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D76031DA4E28500AD36CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D76311DA4E31800AD36CB /* NetworkRestaurantRepository.swift in Sources */,
+				AE2D76321DA4E31800AD36CB /* NetworkSession.swift in Sources */,
+				AE2D76331DA4E31800AD36CB /* Restaurant.swift in Sources */,
+				AE2D76341DA4E31800AD36CB /* RestaurantRepository.swift in Sources */,
+				AE2D76351DA4E31800AD36CB /* URLRequest+HttpMethods.swift in Sources */,
+				AE2D76361DA4E31800AD36CB /* URLSession+NetworkSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2D760C1DA4E28500AD36CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2D76411DA4EBD300AD36CB /* FakeNetworkSession.swift in Sources */,
+				AE2D763F1DA4EAB400AD36CB /* NetworkRestaurantRepositoryTests.swift in Sources */,
+				AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */,
+				AE2D763D1DA4EA8A00AD36CB /* URLSessionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBA5ACA1DA5E7BD00CC869A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */,
+				AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */,
+				AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */,
+				AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +862,31 @@
 			isa = PBXTargetDependency;
 			target = AE23AA961DA1FF2A000334D8 /* OsusumeLunch */;
 			targetProxy = AE23AABA1DA1FF2A000334D8 /* PBXContainerItemProxy */;
+		};
+		AE2D75F41DA4CDB000AD36CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE2D75E81DA4CDB000AD36CB /* OsusumeLunchToday */;
+			targetProxy = AE2D75F31DA4CDB000AD36CB /* PBXContainerItemProxy */;
+		};
+		AE2D76131DA4E28500AD36CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE2D76071DA4E28500AD36CB /* OsusumeNetworking */;
+			targetProxy = AE2D76121DA4E28500AD36CB /* PBXContainerItemProxy */;
+		};
+		AE2D76151DA4E28500AD36CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE23AA961DA1FF2A000334D8 /* OsusumeLunch */;
+			targetProxy = AE2D76141DA4E28500AD36CB /* PBXContainerItemProxy */;
+		};
+		AE2D761C1DA4E28500AD36CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE2D76071DA4E28500AD36CB /* OsusumeNetworking */;
+			targetProxy = AE2D761B1DA4E28500AD36CB /* PBXContainerItemProxy */;
+		};
+		AEBA5AD41DA5E7BD00CC869A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE23AA961DA1FF2A000334D8 /* OsusumeLunch */;
+			targetProxy = AEBA5AD31DA5E7BD00CC869A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -578,6 +998,7 @@
 		AE23AAC31DA1FF2A000334D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -595,6 +1016,7 @@
 		AE23AAC41DA1FF2A000334D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9G43X93F7Z;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -675,6 +1097,167 @@
 			};
 			name = Release;
 		};
+		AE2D75F61DA4CDB000AD36CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeLunchToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.OsusumeLunchToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AE2D75F71DA4CDB000AD36CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeLunchToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunch.OsusumeLunchToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AE2D76201DA4E28500AD36CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE2D76211DA4E28500AD36CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE2D76241DA4E28500AD36CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Debug;
+		};
+		AE2D76251DA4E28500AD36CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Release;
+		};
+		AEBA5AD51DA5E7BD00CC869A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeLunchTodayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTodayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Debug;
+		};
+		AEBA5AD61DA5E7BD00CC869A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9G43X93F7Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = OsusumeLunchTodayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.OsusumeLunchTodayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OsusumeLunch.app/OsusumeLunch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -710,6 +1293,42 @@
 			buildConfigurations = (
 				AE23AAC91DA1FF2A000334D8 /* Debug */,
 				AE23AACA1DA1FF2A000334D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2D75F81DA4CDB000AD36CB /* Build configuration list for PBXNativeTarget "OsusumeLunchToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2D75F61DA4CDB000AD36CB /* Debug */,
+				AE2D75F71DA4CDB000AD36CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2D761F1DA4E28500AD36CB /* Build configuration list for PBXNativeTarget "OsusumeNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2D76201DA4E28500AD36CB /* Debug */,
+				AE2D76211DA4E28500AD36CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2D76231DA4E28500AD36CB /* Build configuration list for PBXNativeTarget "OsusumeNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2D76241DA4E28500AD36CB /* Debug */,
+				AE2D76251DA4E28500AD36CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBA5AD71DA5E7BD00CC869A /* Build configuration list for PBXNativeTarget "OsusumeLunchTodayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBA5AD51DA5E7BD00CC869A /* Debug */,
+				AEBA5AD61DA5E7BD00CC869A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
