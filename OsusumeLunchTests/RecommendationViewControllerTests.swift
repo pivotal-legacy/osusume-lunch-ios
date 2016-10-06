@@ -51,13 +51,23 @@ class RecommendationViewControllerTests: XCTestCase {
         XCTAssertTrue(totalConstraintCount == 4)
     }
 
-
     func test_navigationBarHasListButton() {
         self.recommendationViewController.viewWillLayoutSubviews()
 
         let rightBarButton = self.recommendationViewController.navigationItem.rightBarButtonItem
 
         XCTAssertEqual(rightBarButton?.accessibilityIdentifier, "show restaurants button")
+    }
+
+    func test_tappingShowRestaurantsButtonShowsRestaurantsScreen() {
+
+        let rightBarButton = self.recommendationViewController.navigationItem.rightBarButtonItem
+
+        self.recommendationViewController.perform(rightBarButton?.action)
+
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+            XCTAssertTrue(self.recommendationViewController.navigationController!.viewControllers.last is RestaurantTableViewController)
+        })
     }
 
     func test_tappingRecommendationButtonDisplaysTextInLabelOnSuccess() {

@@ -41,6 +41,7 @@
 		AE51CEE51DA5ED7100AB45B1 /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */; };
 		AE51CEE81DA5EE6900AB45B1 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */; };
 		AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */; };
+		AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */; };
 		AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739601DA2265B000B384B /* AutoLayoutButton.swift */; };
 		AE6739641DA23063000B384B /* ConstraintChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739631DA23063000B384B /* ConstraintChecker.swift */; };
 		AE67396B1DA3360D000B384B /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */; };
@@ -166,6 +167,7 @@
 		AE51CEE41DA5ED7100AB45B1 /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 		AE51CEE71DA5EE6900AB45B1 /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
 		AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		AE6739601DA2265B000B384B /* AutoLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutButton.swift; sourceTree = "<group>"; };
 		AE6739631DA23063000B384B /* ConstraintChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintChecker.swift; sourceTree = "<group>"; };
 		AE67396A1DA3360D000B384B /* FakeRestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRestaurantRepository.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
+				AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
+				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
