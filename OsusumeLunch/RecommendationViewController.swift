@@ -7,7 +7,7 @@ class RecommendationViewController: UIViewController {
     // MARK: - Properties
     var recommendationButton = AutoLayoutButton()
     var recommendationLabel = AutoLayoutLabel()
-    var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
+    var recommendationRepository: RecommendationRepository = NetworkRecommendationRepository()
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -64,7 +64,7 @@ class RecommendationViewController: UIViewController {
 
     // MARK: - Actions
     func getRecommendation() {
-        self.restaurantRepository.getRecommendation()
+        self.recommendationRepository.getRecommendation()
             .onSuccess { restaurant in
                 self.recommendationLabel.text = restaurant.name
             }

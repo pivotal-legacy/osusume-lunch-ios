@@ -38,15 +38,15 @@ class TodayRecommendationViewControllerTests: XCTestCase {
 
     func test_getRecommendationUpdatesLabelOnSuccess() {
 
-        let fakeRestaurantRepository = FakeRestaurantRepository()
+        let fakeRecommendationRepository = FakeRecommendationRepository()
 
-        self.todayRecommendationViewController.restaurantRepository = fakeRestaurantRepository
+        self.todayRecommendationViewController.recommendationRepository = fakeRecommendationRepository
 
         let expectedRestaurantName = "Butagumi"
 
         let promise = Promise<Restaurant, NSError>()
         promise.success(Restaurant(name: expectedRestaurantName))
-        fakeRestaurantRepository.getRecommendationReturnValue = promise
+        fakeRecommendationRepository.getRecommendationReturnValue = promise
 
         self.todayRecommendationViewController.getRecommendation()
 
@@ -55,7 +55,7 @@ class TodayRecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(fakeRestaurantRepository.getRecommendationWasCalled)
+            XCTAssertTrue(fakeRecommendationRepository.getRecommendationWasCalled)
             XCTAssertEqual(self.todayRecommendationViewController.label.text, expectedRestaurantName)
         })
 

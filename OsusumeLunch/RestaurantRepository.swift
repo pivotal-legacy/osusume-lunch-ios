@@ -1,8 +1,7 @@
 import Foundation
 import BrightFutures
+import OsusumeNetworking
 
 public protocol RestaurantRepository {
-    func getRecommendation() -> Future<Restaurant, NSError>
-
     func getAllRestaurants() -> Future<[Restaurant], NSError>
 }

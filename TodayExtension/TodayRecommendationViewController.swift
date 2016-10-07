@@ -17,7 +17,7 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
         alpha: 1.0
     )
 
-    var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
+    var recommendationRepository: RecommendationRepository = NetworkRecommendationRepository()
 
     // MARK: - View Lifecycle
     override func loadView() {
@@ -80,7 +80,7 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
 
     // MARK: - Actions
     func getRecommendation() {
-        self.restaurantRepository.getRecommendation()
+        self.recommendationRepository.getRecommendation()
             .onSuccess { restaurant in
                 self.label.text = restaurant.name
             }

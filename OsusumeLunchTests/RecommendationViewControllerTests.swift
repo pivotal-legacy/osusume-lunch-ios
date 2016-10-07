@@ -6,15 +6,15 @@ import OsusumeNetworking
 
 class RecommendationViewControllerTests: XCTestCase {
     var recommendationViewController: RecommendationViewController!
-    var fakeRestaurantRepository: FakeRestaurantRepository!
+    var fakeRecommendationRepository: FakeRecommendationRepository!
 
     override func setUp() {
         super.setUp()
 
-        self.fakeRestaurantRepository = FakeRestaurantRepository()
+        self.fakeRecommendationRepository = FakeRecommendationRepository()
 
         self.recommendationViewController = RecommendationViewController()
-        self.recommendationViewController.restaurantRepository = self.fakeRestaurantRepository
+        self.recommendationViewController.recommendationRepository = self.fakeRecommendationRepository
     }
 
     func test_recommendationButtonHasCorrectLabel() {
@@ -65,7 +65,7 @@ class RecommendationViewControllerTests: XCTestCase {
 
         self.recommendationViewController.perform(rightBarButton?.action)
 
-        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             XCTAssertTrue(self.recommendationViewController.navigationController!.viewControllers.last is RestaurantTableViewController)
         })
     }
@@ -75,7 +75,7 @@ class RecommendationViewControllerTests: XCTestCase {
         
         let promise = Promise<Restaurant, NSError>()
         promise.success(Restaurant(name: expectedRestaurantName))
-        self.fakeRestaurantRepository.getRecommendationReturnValue = promise
+        self.fakeRecommendationRepository.getRecommendationReturnValue = promise
 
         self.recommendationViewController.recommendationButton.sendActions(for: UIControlEvents.touchUpInside)
 
@@ -84,7 +84,7 @@ class RecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(self.fakeRestaurantRepository.getRecommendationWasCalled)
+            XCTAssertTrue(self.fakeRecommendationRepository.getRecommendationWasCalled)
             XCTAssertEqual(self.recommendationViewController.recommendationLabel.text, expectedRestaurantName)
         })
 
@@ -94,7 +94,7 @@ class RecommendationViewControllerTests: XCTestCase {
     func test_tappingRecommendationButtonDisplaysNotFoundOnFailure() {
         let promise = Promise<Restaurant, NSError>()
         promise.failure(NSError(domain: "", code: 0, userInfo: nil))
-        self.fakeRestaurantRepository.getRecommendationReturnValue = promise
+        self.fakeRecommendationRepository.getRecommendationReturnValue = promise
 
         let waitExpectation = self.expectation(description: "wait for async call")
 
@@ -103,7 +103,7 @@ class RecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(self.fakeRestaurantRepository.getRecommendationWasCalled)
+            XCTAssertTrue(self.fakeRecommendationRepository.getRecommendationWasCalled)
             XCTAssertEqual(self.recommendationViewController.recommendationLabel.text, "Not Found")
         })
 
