@@ -62,9 +62,9 @@ class RestaurantTableViewControllerTests: XCTestCase {
         let firstCell = self.restaurantTableViewController.tableView(
             self.restaurantTableViewController.tableView,
             cellForRowAt: IndexPath(row: 0, section: 0)
-        )
+        ) as! RestaurantWhitelistTableViewCell
 
-        XCTAssertEqual(firstCell.textLabel?.text, "Afuri")
+        XCTAssertEqual(firstCell.restaurantNameLabel.text, "Afuri")
     }
 
     func test_tableViewRowCountMatchesRestaurantArrayCount() {
@@ -93,5 +93,13 @@ class RestaurantTableViewControllerTests: XCTestCase {
             XCTAssertEqual(self.restaurantTableViewController.tableView.numberOfRows(inSection: 0), self.expectedRestaurants.count)
         }
         self.waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    func test_viewDidLoad_registersTableViewCellClass() {
+        let cell = restaurantTableViewController.tableView.dequeueReusableCell(
+            withIdentifier: String(describing: RestaurantWhitelistTableViewCell.self)
+        )
+
+        XCTAssertTrue(cell != nil)
     }
 }

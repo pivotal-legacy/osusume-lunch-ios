@@ -13,7 +13,10 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellReuseIdentifier)
+        self.tableView.register(
+            RestaurantWhitelistTableViewCell.self,
+            forCellReuseIdentifier: String(describing: RestaurantWhitelistTableViewCell.self)
+        )
 
         self.getAllRestaurants()
     }
@@ -24,9 +27,9 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantWhitelistTableViewCell.self), for: indexPath) as! RestaurantWhitelistTableViewCell
 
-        cell.textLabel!.text = self.restaurants[indexPath.row].name
+        cell.setRestaurant(restaurant: self.restaurants[indexPath.row])
 
         return cell
     }
