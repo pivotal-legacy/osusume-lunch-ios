@@ -17,11 +17,12 @@ class RestaurantWhitelistTableViewCellTests: XCTestCase {
     }
 
     func test_cellSetsRestaurantName() {
-        let restaurant = Restaurant(name: "Pizzakaya")
+        let restaurant = Restaurant(id: 1, name: "Pizzakaya")
 
         let cell = RestaurantWhitelistTableViewCell()
         cell.setRestaurant(restaurant: restaurant)
 
         XCTAssertEqual(cell.restaurantNameLabel.text, "Pizzakaya")
+        XCTAssertEqual(cell.restaurantId, 1)
     }
 }

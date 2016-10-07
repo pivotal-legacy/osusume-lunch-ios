@@ -2,6 +2,7 @@ import UIKit
 import OsusumeNetworking
 
 class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
+    var restaurantId: Int!
     var restaurantNameLabel = AutoLayoutLabel()
     var whitelistSwitch = AutoLayoutSwitch()
 
@@ -39,6 +40,7 @@ class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
     }
 
     func setRestaurant(restaurant: Restaurant) {
+        self.restaurantId = restaurant.id
         self.restaurantNameLabel.text = restaurant.name
     }
 }

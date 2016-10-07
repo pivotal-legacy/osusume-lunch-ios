@@ -9,8 +9,8 @@ class RestaurantTableViewControllerTests: XCTestCase {
     var promise: Promise<[Restaurant], NSError>!
 
     let expectedRestaurants: [Restaurant] = [
-        Restaurant(name: "Afuri"),
-        Restaurant(name: "Butagumi"),
+        Restaurant(id: 1, name: "Afuri"),
+        Restaurant(id: 2, name: "Butagumi"),
     ]
 
     override func setUp() {
@@ -42,7 +42,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
     }
 
     func test_didGetAllRestaurantsWhenFailure() {
-        self.restaurantTableViewController.restaurants = [Restaurant(name: "Afuri")]
+        self.restaurantTableViewController.restaurants = [Restaurant(id: 1, name: "Afuri")]
 
         self.promise.failure(NSError(domain: "RestaurantTableViewController_getAllRestaurants", code: 0, userInfo: nil))
 

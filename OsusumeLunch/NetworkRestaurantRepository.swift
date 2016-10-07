@@ -26,9 +26,10 @@ public class NetworkRestaurantRepository: NSObject, RestaurantRepository {
 
                 var restaurants = [Restaurant]()
 
-                if let restaurantArray = resultDictionary.value(forKey: "restaurants") as! Array<NSDictionary>? {
+                if let restaurantArray = resultDictionary.value(forKey: "restaurants") as! [NSDictionary]? {
                     for restaurantDictionary: NSDictionary in restaurantArray {
-                        let restaurant = Restaurant(name: restaurantDictionary.value(forKey: "name") as! String)
+                        let restaurant = Restaurant(dictionary: restaurantDictionary as! [String: AnyObject])
+                        
                         restaurants.append(restaurant)
                     }
                 }

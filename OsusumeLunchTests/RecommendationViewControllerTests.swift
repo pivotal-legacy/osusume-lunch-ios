@@ -74,7 +74,7 @@ class RecommendationViewControllerTests: XCTestCase {
         let expectedRestaurantName = "Butagumi"
         
         let promise = Promise<Restaurant, NSError>()
-        promise.success(Restaurant(name: expectedRestaurantName))
+        promise.success(Restaurant(id: 1, name: expectedRestaurantName))
         self.fakeRecommendationRepository.getRecommendationReturnValue = promise
 
         self.recommendationViewController.recommendationButton.sendActions(for: UIControlEvents.touchUpInside)

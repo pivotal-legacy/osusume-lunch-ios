@@ -23,7 +23,7 @@ public class NetworkRecommendationRepository: NSObject, RecommendationRepository
         self.networkSession.dataTask(request: urlRequest!)
             .onSuccess { resultDictionary in
                 promise.success(
-                    Restaurant(name: resultDictionary.value(forKey: "name") as! String)
+                    Restaurant(dictionary: resultDictionary as! [String: AnyObject])
                 )
             }
             .onFailure{ _ in

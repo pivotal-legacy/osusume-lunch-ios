@@ -45,7 +45,7 @@ class TodayRecommendationViewControllerTests: XCTestCase {
         let expectedRestaurantName = "Butagumi"
 
         let promise = Promise<Restaurant, NSError>()
-        promise.success(Restaurant(name: expectedRestaurantName))
+        promise.success(Restaurant(id: 1, name: expectedRestaurantName))
         fakeRecommendationRepository.getRecommendationReturnValue = promise
 
         self.todayRecommendationViewController.getRecommendation()
