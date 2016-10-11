@@ -40,6 +40,9 @@
 		AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739701DA340EF000B384B /* URLRequest+HttpMethodsTests.swift */; };
 		AE2D763D1DA4EA8A00AD36CB /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6739881DA37398000B384B /* URLSessionTests.swift */; };
 		AE2D763F1DA4EAB400AD36CB /* NetworkRecommendationRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67398E1DA39D9E000B384B /* NetworkRecommendationRepositoryTests.swift */; };
+		AE462E3E1DA78BA000B5A17F /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E3D1DA78BA000B5A17F /* UserDefaultsProtocol.swift */; };
+		AE462E401DA78DF800B5A17F /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */; };
+		AE462E421DA791D200B5A17F /* OsusumeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */; };
 		AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
 		AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */; };
 		AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */; };
@@ -187,6 +190,9 @@
 		AE2D762E1DA4E31800AD36CB /* RecommendationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationRepository.swift; sourceTree = "<group>"; };
 		AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HttpMethods.swift"; sourceTree = "<group>"; };
 		AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
+		AE462E3D1DA78BA000B5A17F /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
+		AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OsusumeUserDefaults.swift; sourceTree = "<group>"; };
 		AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewControllerTests.swift; sourceTree = "<group>"; };
@@ -327,10 +333,12 @@
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AEFDC4EF1DA723B700F6B060 /* NetworkRestaurantRepository.swift */,
+				AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
 				AEFDC4ED1DA7235500F6B060 /* RestaurantRepository.swift */,
 				AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */,
 				AED7FD2D1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift */,
+				AE462E3D1DA78BA000B5A17F /* UserDefaultsProtocol.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -340,10 +348,11 @@
 			children = (
 				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
 				AEFDC4F11DA7247300F6B060 /* FakeRestaurantRepository.swift */,
+				AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
+				AE13E5D91DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift */,
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 				AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */,
-				AE13E5D91DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift */,
 				AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */,
 			);
 			path = OsusumeLunchTests;
@@ -363,8 +372,8 @@
 			children = (
 				AE6739601DA2265B000B384B /* AutoLayoutButton.swift */,
 				AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */,
-				AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */,
 				AED7FD311DA7635D00EB87AF /* AutoLayoutSwitch.swift */,
+				AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */,
 			);
 			name = LayoutComponents;
 			sourceTree = "<group>";
@@ -472,9 +481,9 @@
 			isa = PBXGroup;
 			children = (
 				AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */,
+				AE13E5DB1DA7288A0073D724 /* FakeNetworkSession.swift */,
 				AEFDC4E71DA6449F00F6B060 /* FakeRecommendationRepository.swift */,
 				AEFDC4DD1DA6444600F6B060 /* Info.plist */,
-				AE13E5DB1DA7288A0073D724 /* FakeNetworkSession.swift */,
 			);
 			path = SharedTestUtilities;
 			sourceTree = "<group>";
@@ -847,14 +856,16 @@
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
+				AED7FD321DA7635D00EB87AF /* AutoLayoutSwitch.swift in Sources */,
+				AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */,
 				AEFDC4F01DA723B700F6B060 /* NetworkRestaurantRepository.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
-				AED7FD321DA7635D00EB87AF /* AutoLayoutSwitch.swift in Sources */,
-				AED7FD2E1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift in Sources */,
+				AE462E421DA791D200B5A17F /* OsusumeUserDefaults.swift in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
 				AEFDC4EE1DA7235500F6B060 /* RestaurantRepository.swift in Sources */,
-				AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */,
 				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
+				AED7FD2E1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift in Sources */,
+				AE462E3E1DA78BA000B5A17F /* UserDefaultsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,15 +873,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE13E5DD1DA728970073D724 /* FakeNetworkSession.swift in Sources */,
-				AED7FD2C1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift in Sources */,
-				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */,
 				AEFDC4E51DA6446100F6B060 /* ConstraintChecker.swift in Sources */,
+				AE13E5DD1DA728970073D724 /* FakeNetworkSession.swift in Sources */,
 				AEFDC4E91DA644B500F6B060 /* FakeRecommendationRepository.swift in Sources */,
 				AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */,
+				AE462E401DA78DF800B5A17F /* FakeUserDefaults.swift in Sources */,
+				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
 				AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */,
+				AED7FD2C1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,9 +919,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE13E5DE1DA7289A0073D724 /* FakeNetworkSession.swift in Sources */,
 				AE2D763F1DA4EAB400AD36CB /* NetworkRecommendationRepositoryTests.swift in Sources */,
 				AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */,
-				AE13E5DE1DA7289A0073D724 /* FakeNetworkSession.swift in Sources */,
 				AE2D763D1DA4EA8A00AD36CB /* URLSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,8 +941,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE13E5DC1DA7288A0073D724 /* FakeNetworkSession.swift in Sources */,
 				AEFDC4E41DA6445700F6B060 /* ConstraintChecker.swift in Sources */,
+				AE13E5DC1DA7288A0073D724 /* FakeNetworkSession.swift in Sources */,
 				AEFDC4E81DA6449F00F6B060 /* FakeRecommendationRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

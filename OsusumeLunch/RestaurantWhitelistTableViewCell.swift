@@ -3,6 +3,7 @@ import OsusumeNetworking
 
 class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
     var restaurantId: Int!
+    var userDefaults:UserDefaultsProtocol = OsusumeUserDefaults()
     var restaurantNameLabel = AutoLayoutLabel()
     var whitelistSwitch = AutoLayoutSwitch()
 
@@ -20,6 +21,11 @@ class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
 
     private func setInitialState() {
         self.whitelistSwitch.setOn(true, animated: false)
+        self.whitelistSwitch.addTarget(
+            self,
+            action: #selector(addBlackList(switchState:)),
+            for: UIControlEvents.valueChanged
+        )
     }
 
     private func addSubviews() {
@@ -42,5 +48,13 @@ class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
     func setRestaurant(restaurant: Restaurant) {
         self.restaurantId = restaurant.id
         self.restaurantNameLabel.text = restaurant.name
+    }
+
+    func addBlackList(switchState: UISwitch) {
+        if (switchState.isOn) {
+            userDefaults.removeBlacklistId(id: restaurantId)
+        } else {
+            userDefaults.setBlacklistId(id: restaurantId)
+        }
     }
 }
