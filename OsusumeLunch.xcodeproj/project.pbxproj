@@ -56,6 +56,7 @@
 		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AEBA5ADB1DA5EA4800CC869A /* OsusumeNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D76081DA4E28500AD36CB /* OsusumeNetworking.framework */; };
+		AECF4A041DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF4A031DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift */; };
 		AED7FD2C1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */; };
 		AED7FD2E1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7FD2D1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift */; };
 		AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */; };
@@ -205,6 +206,7 @@
 		AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayRecommendationViewControllerTests.swift; path = ../TodayExtensionTests/TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
 		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../TodayExtensionTests/Info.plist; sourceTree = "<group>"; };
+		AECF4A031DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OsusumeUserDefaultsTests.swift; sourceTree = "<group>"; };
 		AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantWhitelistTableViewCellTests.swift; sourceTree = "<group>"; };
 		AED7FD2D1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantWhitelistTableViewCell.swift; sourceTree = "<group>"; };
 		AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 				AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */,
 				AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */,
+				AECF4A031DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift */,
 			);
 			path = OsusumeLunchTests;
 			sourceTree = "<group>";
@@ -878,6 +881,7 @@
 				AE13E5DD1DA728970073D724 /* FakeNetworkSession.swift in Sources */,
 				AEFDC4E91DA644B500F6B060 /* FakeRecommendationRepository.swift in Sources */,
 				AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */,
+				AECF4A041DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift in Sources */,
 				AE462E401DA78DF800B5A17F /* FakeUserDefaults.swift in Sources */,
 				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
