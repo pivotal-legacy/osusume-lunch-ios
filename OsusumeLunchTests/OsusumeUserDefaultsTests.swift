@@ -11,8 +11,8 @@ class OsusumeUserDefaultsTests: XCTestCase {
     }
 
     override func tearDown() {
-        super.tearDown()
         defaults.userDefaults.removeObject(forKey: "restaurantsBlacklist")
+        super.tearDown()
     }
     
     func test_setBlackListId_withEmptyBlackList() {
@@ -32,7 +32,7 @@ class OsusumeUserDefaultsTests: XCTestCase {
     func test_removeBlackListId_withEmptyBlacklist() {
         defaults.removeBlacklistId(id: 2)
 
-        XCTAssertEqual(defaults.getBlacklistIds(), [])
+        XCTAssertTrue(defaults.getBlacklistIds().isEmpty)
     }
 
     func test_removeBlackListId_withExistingId() {
