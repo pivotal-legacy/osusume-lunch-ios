@@ -48,6 +48,11 @@ class RestaurantWhitelistTableViewCell: AutoLayoutTableViewCell {
     func setRestaurant(restaurant: Restaurant) {
         self.restaurantId = restaurant.id
         self.restaurantNameLabel.text = restaurant.name
+        if userDefaults.getBlacklistIds().index(of: restaurant.id) != nil {
+            self.whitelistSwitch.setOn(false, animated: false)
+        } else {
+            self.whitelistSwitch.setOn(true, animated: false)
+        }
     }
 
     func addBlackList(switchState: UISwitch) {

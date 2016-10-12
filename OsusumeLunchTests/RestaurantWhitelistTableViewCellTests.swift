@@ -26,6 +26,31 @@ class RestaurantWhitelistTableViewCellTests: XCTestCase {
         XCTAssertEqual(cell.restaurantId, 1)
     }
 
+    func test_cellSetsSwitchOffWhenInBlacklist() {
+        let restaurant = Restaurant(id: 1, name: "Pizzakaya")
+
+        let cell = RestaurantWhitelistTableViewCell()
+
+        cell.userDefaults = FakeUserDefaults()
+        cell.userDefaults.setBlacklistId(id: 1)
+
+        cell.setRestaurant(restaurant: restaurant)
+
+        XCTAssertEqual(cell.whitelistSwitch.isOn, false)
+    }
+
+    func test_cellSetsSwitchOnWhenNotInBlacklist() {
+        let restaurant = Restaurant(id: 1, name: "Pizzakaya")
+
+        let cell = RestaurantWhitelistTableViewCell()
+
+        cell.userDefaults = FakeUserDefaults()
+
+        cell.setRestaurant(restaurant: restaurant)
+
+        XCTAssertEqual(cell.whitelistSwitch.isOn, true)
+    }
+
     func test_cellSetsIdToUserDefaultsIfSwitchIsOff() {
         let restaurant = Restaurant(id: 1, name: "Pizzakaya")
 
