@@ -67,8 +67,6 @@
 		AEFDC4E81DA6449F00F6B060 /* FakeRecommendationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRecommendationRepository.swift */; };
 		AEFDC4E91DA644B500F6B060 /* FakeRecommendationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRecommendationRepository.swift */; };
 		AEFDC4EA1DA644B700F6B060 /* FakeRecommendationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4E71DA6449F00F6B060 /* FakeRecommendationRepository.swift */; };
-		AEFDC4EB1DA644CF00F6B060 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
-		AEFDC4EC1DA644CF00F6B060 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AEFDC4EE1DA7235500F6B060 /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4ED1DA7235500F6B060 /* RestaurantRepository.swift */; };
 		AEFDC4F01DA723B700F6B060 /* NetworkRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4EF1DA723B700F6B060 /* NetworkRestaurantRepository.swift */; };
 		AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC4F11DA7247300F6B060 /* FakeRestaurantRepository.swift */; };
@@ -288,8 +286,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFDC4EB1DA644CF00F6B060 /* BrightFutures.framework in Frameworks */,
-				AEFDC4EC1DA644CF00F6B060 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
