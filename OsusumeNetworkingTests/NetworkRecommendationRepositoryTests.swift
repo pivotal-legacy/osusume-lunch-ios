@@ -16,25 +16,25 @@ class NetworkRecommendationRepositoryTests: XCTestCase {
         self.networkSession.dataTaskReturnValue = self.promise.future
     }
 
-    func test_getRecommendation_requestsRestaurantsRecommendationRoute() {
-        self.repository.getRecommendation()
+    func test_findRecommendation_requestsRestaurantsRecommendationRoute() {
+        self.repository.findRecommendation()
 
         XCTAssertEqual(
             self.networkSession.dataTaskArgs.url?.absoluteString,
-            "\(self.repository.apiBase)/restaurants/recommendation"
+            "\(self.repository.apiBase)/recommendations"
         )
         XCTAssertEqual(
             self.networkSession.dataTaskArgs.httpMethod,
-            "GET"
+            "POST"
         )
     }
 
-    func test_getRecommendation_returnsRestaurant() {
+    func test_findRecommendation_returnsRestaurant() {
         let expectedRestaurantName = "Afuri"
 
         self.promise.success(["name": expectedRestaurantName])
 
-        let future = self.repository.getRecommendation()
+        let future = self.repository.findRecommendation()
 
         let expectation = self.expectation(description: "complete expectation")
 

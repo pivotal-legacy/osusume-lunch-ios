@@ -43,7 +43,6 @@
 		AE462E3E1DA78BA000B5A17F /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E3D1DA78BA000B5A17F /* UserDefaultsProtocol.swift */; };
 		AE462E401DA78DF800B5A17F /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */; };
 		AE462E421DA791D200B5A17F /* OsusumeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */; };
-		AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
 		AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */; };
 		AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */; };
 		AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */; };
@@ -52,6 +51,7 @@
 		AE6739781DA34C7D000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE67398B1DA37803000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
+		AE816AF21DAF314F00888F41 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
 		AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */; };
 		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
@@ -932,7 +932,7 @@
 			files = (
 				AEFDC4E61DA6447200F6B060 /* ConstraintChecker.swift in Sources */,
 				AEFDC4EA1DA644B700F6B060 /* FakeRecommendationRepository.swift in Sources */,
-				AE51CEE21DA5EBC800AB45B1 /* TodayRecommendationViewController.swift in Sources */,
+				AE816AF21DAF314F00888F41 /* TodayRecommendationViewController.swift in Sources */,
 				AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

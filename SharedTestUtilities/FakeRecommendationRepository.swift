@@ -5,12 +5,12 @@ import OsusumeNetworking
 @testable import OsusumeLunch
 
 class FakeRecommendationRepository: RecommendationRepository {
-    var getRecommendationWasCalled = false
-    var getRecommendationReturnValue = Promise<Restaurant, NSError>()
+    var findRecommendationWasCalled = false
+    var findRecommendationReturnValue = Promise<Restaurant, NSError>()
 
-    func getRecommendation() -> Future<Restaurant, NSError> {
-        self.getRecommendationWasCalled = true
+    func findRecommendation() -> Future<Restaurant, NSError> {
+        self.findRecommendationWasCalled = true
 
-        return getRecommendationReturnValue.future
+        return findRecommendationReturnValue.future
     }
 }

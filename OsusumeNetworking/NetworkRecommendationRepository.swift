@@ -12,12 +12,12 @@ public class NetworkRecommendationRepository: NSObject, RecommendationRepository
 
     public var networkSession: NetworkSession = URLSession()
     
-    public func getRecommendation() -> Future<Restaurant, NSError> {
+    public func findRecommendation() -> Future<Restaurant, NSError> {
         let promise = Promise<Restaurant, NSError>()
 
-        let urlRequest = URLRequest.get(
-            urlString: self.apiBase + "/restaurants/recommendation",
-            headers: [String:String]()
+        let urlRequest = URLRequest.post(
+            urlString: self.apiBase + "/recommendations",
+            headers: ["Content-Type":"application/json"]
         )
 
         self.networkSession.dataTask(request: urlRequest!)

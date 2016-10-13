@@ -25,4 +25,22 @@ class URLRequest_HttpMethodsTests: XCTestCase {
 
         XCTAssertNil(urlRequest)
     }
+
+    func test_post_setsPathAndHeader() {
+        let headers = ["Content-Type": "application/json"]
+        let urlRequest = URLRequest.post(urlString: "http://example.com", headers: headers)
+
+        let expectedUrl = URL(string: "http://example.com")
+
+        XCTAssertEqual(urlRequest!.httpMethod, "POST")
+        XCTAssertEqual(urlRequest!.url, expectedUrl)
+        XCTAssertEqual(urlRequest!.allHTTPHeaderFields!, headers)
+    }
+
+    func test_post_returnsNilForBadUrl() {
+        let headers = [String:String]()
+        let urlRequest = URLRequest.post(urlString: "\\\\\\", headers: headers)
+
+        XCTAssertNil(urlRequest)
+    }
 }

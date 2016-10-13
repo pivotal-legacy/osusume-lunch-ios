@@ -3,8 +3,8 @@ import BrightFutures
 import Result
 import OsusumeNetworking
 
-// @testable import OsusumeLunchToday // not supported by Apple as it is an extension
-// This test was included as a target by OsusumeLunchToday
+// @testable import TodayExtension // not supported by Apple as it is an extension
+// This test was included as a target by TodayExtension
 
 class TodayRecommendationViewControllerTests: XCTestCase {
     var todayRecommendationViewController: TodayRecommendationViewController!
@@ -36,6 +36,12 @@ class TodayRecommendationViewControllerTests: XCTestCase {
         XCTAssertTrue((label.text?.characters.count)! > 0)
     }
 
+    func test_viewHasTapGestureRecognizer() {
+        let view = self.todayRecommendationViewController.view
+
+        XCTAssertTrue((view?.gestureRecognizers?.count)! > 0)
+    }
+
     func test_getRecommendationUpdatesLabelOnSuccess() {
 
         let fakeRecommendationRepository = FakeRecommendationRepository()
@@ -46,7 +52,7 @@ class TodayRecommendationViewControllerTests: XCTestCase {
 
         let promise = Promise<Restaurant, NSError>()
         promise.success(Restaurant(id: 1, name: expectedRestaurantName))
-        fakeRecommendationRepository.getRecommendationReturnValue = promise
+        fakeRecommendationRepository.findRecommendationReturnValue = promise
 
         self.todayRecommendationViewController.getRecommendation()
 
@@ -55,11 +61,10 @@ class TodayRecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(fakeRecommendationRepository.getRecommendationWasCalled)
+            XCTAssertTrue(fakeRecommendationRepository.findRecommendationWasCalled)
             XCTAssertEqual(self.todayRecommendationViewController.label.text, expectedRestaurantName)
         })
 
         self.waitForExpectations(timeout: 1, handler: nil)
     }
-
 }

@@ -64,7 +64,7 @@ class RecommendationViewController: UIViewController {
 
     // MARK: - Actions
     func getRecommendation() {
-        self.recommendationRepository.getRecommendation()
+        self.recommendationRepository.findRecommendation()
             .onSuccess { restaurant in
                 self.recommendationLabel.text = restaurant.name
             }

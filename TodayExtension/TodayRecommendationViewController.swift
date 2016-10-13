@@ -5,18 +5,12 @@ import Result
 import OsusumeNetworking
 
 @objc(TodayRecommendationViewController)
-class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
+class TodayRecommendationViewController: UIViewController, NCWidgetProviding, UIGestureRecognizerDelegate {
 
     // MARK: - Properties
     var label = UILabel()
     let defaultText = "🍽Fetching a delicious restaurant..."
-    let backgroundPinkColor = UIColor(
-        red: 234/255,
-        green: 60/255,
-        blue: 164/255,
-        alpha: 1.0
-    )
-
+    let backgroundColor = UIColor(red: 234/255, green: 60/255, blue: 164/255, alpha: 1.0)
     var recommendationRepository: RecommendationRepository = NetworkRecommendationRepository()
 
     // MARK: - View Lifecycle
@@ -31,6 +25,7 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
                 height: 200.0
             )
         )
+        self.setupActionHandlers()
     }
 
     override func viewDidLoad() {
@@ -54,15 +49,15 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
         self.label.text = self.defaultText
     }
 
-    // MARK: - NCWidgetProviding Protocol
-    private func widgetPerformUpdate(completionHandler: ((NCUpdateResult) -> Void)) {
-        completionHandler(NCUpdateResult.noData)
+    // MARK: - View Setup
+    private func setupActionHandlers() {
+        let recognizer = UITapGestureRecognizer.init(target: self, action: #selector(self.didTapView))
+        recognizer.delegate = self
+        self.view.addGestureRecognizer(recognizer)
     }
 
-    // MARK: - View Setup
     private func setupStyling() {
-        self.view.backgroundColor = self.backgroundPinkColor
-
+        self.view.backgroundColor = self.backgroundColor
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.label.textColor = UIColor.black
         self.label.textAlignment = NSTextAlignment.center
@@ -71,7 +66,6 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
 
     private func setupConstraints() {
         let margins = self.view.layoutMarginsGuide
-
         self.label.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
         self.label.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         self.label.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
@@ -80,12 +74,19 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
 
     // MARK: - Actions
     func getRecommendation() {
-        self.recommendationRepository.getRecommendation()
+        self.recommendationRepository.findRecommendation()
             .onSuccess { restaurant in
                 self.label.text = restaurant.name
             }
             .onFailure { error in
                 self.label.text = "Not Found"
+        }
+    }
+
+    func didTapView() {
+        let url = URL(string: "osusumeLunch://")
+        if let appurl = url {
+            self.extensionContext!.open(appurl, completionHandler: nil)
         }
     }
 }

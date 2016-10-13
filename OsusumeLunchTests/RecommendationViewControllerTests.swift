@@ -75,7 +75,7 @@ class RecommendationViewControllerTests: XCTestCase {
         
         let promise = Promise<Restaurant, NSError>()
         promise.success(Restaurant(id: 1, name: expectedRestaurantName))
-        self.fakeRecommendationRepository.getRecommendationReturnValue = promise
+        self.fakeRecommendationRepository.findRecommendationReturnValue = promise
 
         self.recommendationViewController.recommendationButton.sendActions(for: UIControlEvents.touchUpInside)
 
@@ -84,7 +84,7 @@ class RecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(self.fakeRecommendationRepository.getRecommendationWasCalled)
+            XCTAssertTrue(self.fakeRecommendationRepository.findRecommendationWasCalled)
             XCTAssertEqual(self.recommendationViewController.recommendationLabel.text, expectedRestaurantName)
         })
 
@@ -94,7 +94,7 @@ class RecommendationViewControllerTests: XCTestCase {
     func test_tappingRecommendationButtonDisplaysNotFoundOnFailure() {
         let promise = Promise<Restaurant, NSError>()
         promise.failure(NSError(domain: "", code: 0, userInfo: nil))
-        self.fakeRecommendationRepository.getRecommendationReturnValue = promise
+        self.fakeRecommendationRepository.findRecommendationReturnValue = promise
 
         let waitExpectation = self.expectation(description: "wait for async call")
 
@@ -103,7 +103,7 @@ class RecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(self.fakeRecommendationRepository.getRecommendationWasCalled)
+            XCTAssertTrue(self.fakeRecommendationRepository.findRecommendationWasCalled)
             XCTAssertEqual(self.recommendationViewController.recommendationLabel.text, "Not Found")
         })
 
