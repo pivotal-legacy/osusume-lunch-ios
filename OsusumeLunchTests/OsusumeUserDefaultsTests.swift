@@ -30,6 +30,8 @@ class OsusumeUserDefaultsTests: XCTestCase {
     }
 
     func test_removeBlackListId_withEmptyBlacklist() {
+        defaults.userDefaults.removeObject(forKey: "restaurantsBlacklist")
+
         defaults.removeBlacklistId(id: 2)
 
         XCTAssertTrue(defaults.getBlacklistIds().isEmpty)
