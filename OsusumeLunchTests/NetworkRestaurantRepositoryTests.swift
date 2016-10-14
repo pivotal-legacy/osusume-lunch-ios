@@ -40,4 +40,37 @@ class NetworkRestaurantRepositoryTests: XCTestCase {
         
         self.waitForExpectations(timeout: 2, handler: nil)
     }
+
+    func test_createRestaurant_returnsRestaurant() {
+        let expectedRestaurant = ["id": 1, "name":"Afuri"] as [String : Any]
+
+        self.promise.success(expectedRestaurant as NSDictionary)
+
+        let future = self.repository.createRestaurant(name: "Afuri")
+
+        let expectation = self.expectation(description: "complete expectation")
+
+        future.onComplete(callback: { result in
+            expectation.fulfill()
+            XCTAssertEqual(result.value!.name, "Afuri")
+        })
+
+        self.waitForExpectations(timeout: 2, handler: nil)
+    }
+
+    func test_createRestaurant_returnsError() {
+        let expectedError = NSError(domain: "networkRestaurantRepository_createRestaurant", code: 0, userInfo: nil)
+        self.promise.failure(expectedError)
+
+        let future = self.repository.createRestaurant(name: "Afuri")
+
+        let expectation = self.expectation(description: "complete expectation")
+        future.onFailure(callback: {error in
+            expectation.fulfill()
+
+            XCTAssertEqual(error.domain, expectedError.domain)
+        })
+
+        self.waitForExpectations(timeout: 2, handler: nil)
+    }
 }

@@ -49,4 +49,31 @@ public class NetworkRestaurantRepository: NSObject, RestaurantRepository {
         }
         return promise.future
     }
+
+    public func createRestaurant(name: String) -> Future<Restaurant, NSError> {
+        let promise = Promise<Restaurant, NSError>()
+
+        let urlRequest = URLRequest.post(
+            urlString: self.apiBase + "/restaurants",
+            headers: [String : String](),
+            body: ["restaurant": ["name": name]]
+        )
+
+        self.networkSession.dataTask(request: urlRequest!)
+            .onSuccess { restaurant in
+                promise.success(
+                    Restaurant(dictionary: restaurant as! [String : AnyObject])
+                )
+            }
+            .onFailure { _ in
+                promise.failure(
+                    NSError(
+                        domain: "networkRestaurantRepository_createRestaurant",
+                        code: 0,
+                        userInfo: nil
+                    )
+                )
+            }
+        return promise.future
+    }
 }

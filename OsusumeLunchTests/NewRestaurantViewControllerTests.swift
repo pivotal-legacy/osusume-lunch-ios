@@ -4,14 +4,18 @@ import XCTest
 
 class NewRestaurantViewControllerTests: XCTestCase {
     let viewController = NewRestaurantViewController()
+    var fakeRestaurantRepository: FakeRestaurantRepository!
+    
 
     override func setUp() {
         super.setUp()
+
+        self.fakeRestaurantRepository = FakeRestaurantRepository()
+        self.viewController.restaurantRepository = self.fakeRestaurantRepository
         self.viewController.view.setNeedsLayout()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -47,5 +51,19 @@ class NewRestaurantViewControllerTests: XCTestCase {
         XCTAssertTrue(labelConstraintCount > 0)
         XCTAssertTrue(textFieldConstraintCount > 0)
         XCTAssertTrue(buttonConstraintCount > 0 )
+    }
+
+    func test_tappingSaveButtonCallsCreateRestaurant() {
+        self.viewController.nameTextField.text = "Afuri"
+        self.viewController.saveButton.sendActions(for: UIControlEvents.touchUpInside)
+
+        XCTAssertTrue(self.fakeRestaurantRepository.createRestaurantWasCalled)
+    }
+
+    func test_tappingSaveButtonDoesNotCallCreateRestaurant_whenNameNotSpecified() {
+        self.viewController.nameTextField.text = ""
+        self.viewController.saveButton.sendActions(for: UIControlEvents.touchUpInside)
+
+        XCTAssertFalse(self.fakeRestaurantRepository.createRestaurantWasCalled)
     }
 }

@@ -4,6 +4,7 @@ class NewRestaurantViewController: UIViewController {
     let nameTextField = AutoLayoutTextField()
     let nameTextFieldLabel = AutoLayoutLabel()
     let saveButton = AutoLayoutButton()
+    var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -13,6 +14,7 @@ class NewRestaurantViewController: UIViewController {
         self.setupSubviews()
         self.addSubviews()
         self.addConstraints()
+        self.addActions()
     }
 
     // MARK: - View Setup
@@ -48,5 +50,17 @@ class NewRestaurantViewController: UIViewController {
 
         self.saveButton.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor).isActive = true
         self.saveButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+    }
+
+    private func addActions() {
+        self.saveButton.addTarget(self, action: #selector(self.createRestaurant), for: UIControlEvents.touchUpInside)
+    }
+
+    // MARK: - Actions
+    func createRestaurant() {
+        guard let name = self.nameTextField.text, name != "" else {
+            return
+        }
+        self.restaurantRepository.createRestaurant(name: name)
     }
 }

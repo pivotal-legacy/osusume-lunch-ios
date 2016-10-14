@@ -17,7 +17,8 @@ public class NetworkRecommendationRepository: NSObject, RecommendationRepository
 
         let urlRequest = URLRequest.post(
             urlString: self.apiBase + "/recommendations",
-            headers: ["Content-Type":"application/json"]
+            headers: ["Content-Type":"application/json"],
+            body: [String:Any]()
         )
 
         self.networkSession.dataTask(request: urlRequest!)
