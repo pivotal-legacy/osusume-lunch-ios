@@ -13,12 +13,23 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupNavbar()
         self.tableView.register(
             RestaurantWhitelistTableViewCell.self,
             forCellReuseIdentifier: String(describing: RestaurantWhitelistTableViewCell.self)
         )
 
         self.getAllRestaurants()
+    }
+
+    // MARK: - View Setup
+    private func setupNavbar() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.add,
+            target: self,
+            action: #selector(self.showNewRestaurantScreen)
+        )
+        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "add restaurant button"
     }
 
     // MARK: - Table view data source
@@ -46,5 +57,10 @@ class RestaurantTableViewController: UITableViewController {
             .onComplete { _ in
                 self.tableView.reloadData()
             }
+    }
+
+    @objc
+    private func showNewRestaurantScreen() {
+        self.navigationController?.pushViewController(NewRestaurantViewController(), animated: true)
     }
 }

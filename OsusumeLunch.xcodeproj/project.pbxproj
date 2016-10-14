@@ -51,7 +51,9 @@
 		AE6739781DA34C7D000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE67398B1DA37803000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
-		AE816AF21DAF314F00888F41 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
+		AE816AFD1DAF6E8C00888F41 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
+		AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */; };
+		AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */; };
 		AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */; };
 		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
@@ -201,6 +203,8 @@
 		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionTests.swift; path = ../OsusumeNetworkingTests/URLSessionTests.swift; sourceTree = "<group>"; };
 		AE67398E1DA39D9E000B384B /* NetworkRecommendationRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRecommendationRepositoryTests.swift; sourceTree = "<group>"; };
+		AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewController.swift; sourceTree = "<group>"; };
+		AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewControllerTests.swift; sourceTree = "<group>"; };
 		AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayRecommendationViewControllerTests.swift; path = ../TodayExtensionTests/TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
 		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../TodayExtensionTests/Info.plist; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
 				AEFDC4EF1DA723B700F6B060 /* NetworkRestaurantRepository.swift */,
+				AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */,
 				AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */,
 				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
 				AEFDC4ED1DA7235500F6B060 /* RestaurantRepository.swift */,
@@ -349,6 +354,7 @@
 				AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AE13E5D91DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift */,
+				AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */,
 				AECF4A031DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift */,
 				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
 				AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */,
@@ -858,6 +864,7 @@
 				AED7FD321DA7635D00EB87AF /* AutoLayoutSwitch.swift in Sources */,
 				AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */,
 				AEFDC4F01DA723B700F6B060 /* NetworkRestaurantRepository.swift in Sources */,
+				AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE462E421DA791D200B5A17F /* OsusumeUserDefaults.swift in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
@@ -879,6 +886,7 @@
 				AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */,
 				AE462E401DA78DF800B5A17F /* FakeUserDefaults.swift in Sources */,
 				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
+				AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */,
 				AECF4A041DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
 				AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */,
@@ -932,7 +940,7 @@
 			files = (
 				AEFDC4E61DA6447200F6B060 /* ConstraintChecker.swift in Sources */,
 				AEFDC4EA1DA644B700F6B060 /* FakeRecommendationRepository.swift in Sources */,
-				AE816AF21DAF314F00888F41 /* TodayRecommendationViewController.swift in Sources */,
+				AE816AFD1DAF6E8C00888F41 /* TodayRecommendationViewController.swift in Sources */,
 				AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

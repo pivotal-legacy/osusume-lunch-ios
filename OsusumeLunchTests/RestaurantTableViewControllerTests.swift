@@ -27,6 +27,21 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     }
 
+    func test_navigationBarHasAddButton() {
+        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+
+        XCTAssertEqual(rightButton?.accessibilityIdentifier, "add restaurant button")
+    }
+
+    func test_tappingAddRestaurantButtonDisplaysNewRestaurantScreen() {
+        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+        self.restaurantTableViewController.perform(rightButton?.action)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            XCTAssertTrue(self.restaurantTableViewController.navigationController?.viewControllers.last is NewRestaurantViewController)
+        })
+    }
+
     func test_didGetAllRestaurantsWhenSuccess() {
         self.promise.success(self.expectedRestaurants)
 
