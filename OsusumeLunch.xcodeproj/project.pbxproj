@@ -334,15 +334,11 @@
 			children = (
 				AE67398D1DA39BB6000B384B /* Extensions */,
 				AE2D75E21DA48DA700AD36CB /* LayoutComponents */,
+				AEA260AD1DB0858B009263F6 /* Repositories */,
+				AEA260AB1DB0852D009263F6 /* ViewControllers */,
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
-				AEFDC4EF1DA723B700F6B060 /* NetworkRestaurantRepository.swift */,
-				AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */,
 				AE462E411DA791D200B5A17F /* OsusumeUserDefaults.swift */,
-				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
-				AEFDC4ED1DA7235500F6B060 /* RestaurantRepository.swift */,
-				AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */,
-				AED7FD2D1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift */,
 				AE462E3D1DA78BA000B5A17F /* UserDefaultsProtocol.swift */,
 			);
 			path = OsusumeLunch;
@@ -351,16 +347,12 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
+				AEA260AE1DB085A4009263F6 /* Repositories */,
+				AEA260AC1DB08568009263F6 /* ViewControllers */,
 				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
-				AEFDC4F11DA7247300F6B060 /* FakeRestaurantRepository.swift */,
 				AE462E3F1DA78DF800B5A17F /* FakeUserDefaults.swift */,
 				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
-				AE13E5D91DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift */,
-				AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */,
 				AECF4A031DACC3DC00EE5002 /* OsusumeUserDefaultsTests.swift */,
-				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
-				AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */,
-				AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */,
 			);
 			path = OsusumeLunchTests;
 			sourceTree = "<group>";
@@ -474,6 +466,46 @@
 			children = (
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AEA260AB1DB0852D009263F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */,
+				AE0CFC141DA2197000234CF8 /* RecommendationViewController.swift */,
+				AE51CEEB1DA6287500AB45B1 /* RestaurantTableViewController.swift */,
+				AED7FD2D1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AEA260AC1DB08568009263F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */,
+				AE0CFC121DA2190400234CF8 /* RecommendationViewControllerTests.swift */,
+				AE51CEED1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift */,
+				AED7FD2B1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AEA260AD1DB0858B009263F6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFDC4EF1DA723B700F6B060 /* NetworkRestaurantRepository.swift */,
+				AEFDC4ED1DA7235500F6B060 /* RestaurantRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		AEA260AE1DB085A4009263F6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFDC4F11DA7247300F6B060 /* FakeRestaurantRepository.swift */,
+				AE13E5D91DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift */,
+			);
+			name = Repositories;
 			sourceTree = "<group>";
 		};
 		AEBA5ACF1DA5E7BD00CC869A /* TodayExtensionTests */ = {
