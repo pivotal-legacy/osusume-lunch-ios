@@ -24,4 +24,11 @@ class ConstraintChecker {
         
         return count
     }
+
+    class func constraintCount(subview: UIView) -> Int {
+        let superViewConstraintCount = ConstraintChecker.superviewConstraintCount(subview: subview)
+        let viewConstraintCount = subview.constraints.count
+
+        return superViewConstraintCount + viewConstraintCount
+    }
 }

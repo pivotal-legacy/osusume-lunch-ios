@@ -54,6 +54,7 @@
 		AE816AFD1DAF6E8C00888F41 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
 		AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */; };
 		AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */; };
+		AEA260AA1DB06B2D009263F6 /* AutoLayoutTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */; };
 		AEBA5AD11DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */; };
 		AEBA5AD91DA5E9BD00CC869A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AEBA5ADA1DA5E9BD00CC869A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
@@ -205,6 +206,7 @@
 		AE67398E1DA39D9E000B384B /* NetworkRecommendationRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRecommendationRepositoryTests.swift; sourceTree = "<group>"; };
 		AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewController.swift; sourceTree = "<group>"; };
 		AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewControllerTests.swift; sourceTree = "<group>"; };
+		AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutTextField.swift; sourceTree = "<group>"; };
 		AEBA5ACE1DA5E7BD00CC869A /* TodayExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA5AD01DA5E7BD00CC869A /* TodayRecommendationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayRecommendationViewControllerTests.swift; path = ../TodayExtensionTests/TodayRecommendationViewControllerTests.swift; sourceTree = "<group>"; };
 		AEBA5AD21DA5E7BD00CC869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../TodayExtensionTests/Info.plist; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				AE2D75E01DA48DA100AD36CB /* AutoLayoutLabel.swift */,
 				AED7FD311DA7635D00EB87AF /* AutoLayoutSwitch.swift */,
 				AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */,
+				AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */,
 			);
 			name = LayoutComponents;
 			sourceTree = "<group>";
@@ -863,6 +866,7 @@
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
 				AED7FD321DA7635D00EB87AF /* AutoLayoutSwitch.swift in Sources */,
 				AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */,
+				AEA260AA1DB06B2D009263F6 /* AutoLayoutTextField.swift in Sources */,
 				AEFDC4F01DA723B700F6B060 /* NetworkRestaurantRepository.swift in Sources */,
 				AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
