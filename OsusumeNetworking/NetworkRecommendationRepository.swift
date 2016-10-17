@@ -15,10 +15,12 @@ public class NetworkRecommendationRepository: NSObject, RecommendationRepository
     public func findRecommendation() -> Future<Restaurant, NSError> {
         let promise = Promise<Restaurant, NSError>()
 
+        let body = ["blacklist": ["ids":[AnyObject]()]]
+
         let urlRequest = URLRequest.post(
             urlString: self.apiBase + "/recommendations",
             headers: ["Content-Type":"application/json"],
-            body: [String:Any]()
+            body: body
         )
 
         self.networkSession.dataTask(request: urlRequest!)
