@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import OsusumeLunch
+@testable import OsusumeNetworking
 
 class OsusumeUserDefaultsTests: XCTestCase {
     var defaults:OsusumeUserDefaults!
@@ -14,7 +14,7 @@ class OsusumeUserDefaultsTests: XCTestCase {
         defaults.userDefaults.removeObject(forKey: "restaurantsBlacklist")
         super.tearDown()
     }
-    
+
     func test_setBlackListId_withEmptyBlackList() {
         defaults.setBlacklistId(id: 1)
 
@@ -41,7 +41,7 @@ class OsusumeUserDefaultsTests: XCTestCase {
         defaults.userDefaults.set([1,2,3], forKey: "restaurantsBlacklist")
 
         defaults.removeBlacklistId(id: 2)
-
+        
         XCTAssertEqual(defaults.getBlacklistIds(), [1, 3])
     }
 }

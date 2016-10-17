@@ -1,6 +1,6 @@
 import Foundation
 
-protocol UserDefaultsProtocol {
+public protocol UserDefaultsProtocol {
     func setBlacklistId(id: Int)
     func getBlacklistIds() -> [Int]
     func removeBlacklistId(id: Int)

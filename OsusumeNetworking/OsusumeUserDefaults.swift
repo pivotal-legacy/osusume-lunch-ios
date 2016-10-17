@@ -1,10 +1,14 @@
 import Foundation
 
-class OsusumeUserDefaults: UserDefaultsProtocol {
+public class OsusumeUserDefaults: NSObject, UserDefaultsProtocol {
     static let key = "restaurantsBlacklist"
     var userDefaults = UserDefaults.standard
 
-    func setBlacklistId(id: Int) {
+    override public init() {
+        super.init()
+    }
+
+    public func setBlacklistId(id: Int) {
         guard blacklist() != nil else {
             userDefaults.set([id], forKey: OsusumeUserDefaults.key)
             return
@@ -12,14 +16,14 @@ class OsusumeUserDefaults: UserDefaultsProtocol {
         userDefaults.set(getBlacklistIds() + [id], forKey: OsusumeUserDefaults.key)
     }
 
-    func getBlacklistIds() -> [Int] {
+    public func getBlacklistIds() -> [Int] {
         guard let blacklist = blacklist() else {
             return []
         }
         return blacklist
     }
 
-    func removeBlacklistId(id: Int) {
+    public func removeBlacklistId(id: Int) {
         guard blacklist() != nil else {
             return
         }
