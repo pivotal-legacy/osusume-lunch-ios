@@ -13,7 +13,7 @@ class RecommendationViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.setupNavigationItems()
-        self.setupButton()
+        self.setupViewComponents()
         self.addSubviews()
     }
 
@@ -44,11 +44,13 @@ class RecommendationViewController: UIViewController {
         self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "show restaurants button"
     }
 
-    private func setupButton() {
-        self.recommendationButton.setTitleColor(UIColor.black, for: UIControlState.normal)
-        self.recommendationButton.setTitle("recommend", for: UIControlState.normal)
-        self.recommendationButton.layer.borderColor = UIColor.black.cgColor
-        self.recommendationButton.layer.borderWidth = 1.0
+    private func setupViewComponents() {
+        self.recommendationLabel.textAlignment = .center
+        self.recommendationLabel.textColor = UIColor.purple
+
+        let image = UIImage(named: "clickMeImage.png")
+        self.recommendationButton.setImage(image, for: .normal)
+        self.recommendationButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
 
         self.recommendationButton.addTarget(
             self,

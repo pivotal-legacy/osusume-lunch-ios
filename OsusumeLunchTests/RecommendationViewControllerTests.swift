@@ -17,10 +17,6 @@ class RecommendationViewControllerTests: XCTestCase {
         self.recommendationViewController.recommendationRepository = self.fakeRecommendationRepository
     }
 
-    func test_recommendationButtonHasCorrectLabel() {
-        XCTAssertEqual(self.recommendationViewController.recommendationButton.titleLabel!.text, "recommend")
-    }
-
     func test_recommendationButtonIsAddedToSubview() {
         let button = self.recommendationViewController.recommendationButton
         XCTAssertTrue(self.recommendationViewController.view.subviews.contains(button))

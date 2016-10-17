@@ -24,6 +24,7 @@ class RestaurantTableViewController: UITableViewController {
 
     // MARK: - View Setup
     private func setupNavbar() {
+        self.navigationItem.title = "Filter"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.add,
             target: self,
