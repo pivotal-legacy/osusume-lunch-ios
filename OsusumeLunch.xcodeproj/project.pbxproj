@@ -14,6 +14,7 @@
 		AE13E5DD1DA728970073D724 /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE13E5DB1DA7288A0073D724 /* FakeNetworkSession.swift */; };
 		AE13E5DE1DA7289A0073D724 /* FakeNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE13E5DB1DA7288A0073D724 /* FakeNetworkSession.swift */; };
 		AE14B8941DB46C5800730FE9 /* OsusumeUserDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14B8931DB46C5800730FE9 /* OsusumeUserDefaultsTests.swift */; };
+		AE14B8951DB46FFC00730FE9 /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260B31DB4694C009263F6 /* FakeUserDefaults.swift */; };
 		AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */; };
 		AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE23AAA11DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld */; };
 		AE23AAA51DA1FF2A000334D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE23AAA41DA1FF2A000334D8 /* Assets.xcassets */; };
@@ -964,6 +965,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE13E5DE1DA7289A0073D724 /* FakeNetworkSession.swift in Sources */,
+				AE14B8951DB46FFC00730FE9 /* FakeUserDefaults.swift in Sources */,
 				AE14B8941DB46C5800730FE9 /* OsusumeUserDefaultsTests.swift in Sources */,
 				AE2D763F1DA4EAB400AD36CB /* NetworkRecommendationRepositoryTests.swift in Sources */,
 				AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */,

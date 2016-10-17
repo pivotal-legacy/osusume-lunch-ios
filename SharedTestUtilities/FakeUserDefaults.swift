@@ -13,7 +13,9 @@ public class FakeUserDefaults: NSObject, UserDefaultsProtocol {
         blackList.append(id)
     }
 
+    public var getBlacklistIdsWasCalled = false
     public func getBlacklistIds() -> [Int] {
+        getBlacklistIdsWasCalled = true
         return blackList
     }
 

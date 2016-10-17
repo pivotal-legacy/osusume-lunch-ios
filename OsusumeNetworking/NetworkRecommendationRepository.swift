@@ -5,6 +5,7 @@ import Result
 public class NetworkRecommendationRepository: NSObject, RecommendationRepository {
 
     let apiBase = "https://osusume-lunch.cfapps.io"
+    var userDefaults: UserDefaultsProtocol = OsusumeUserDefaults()
 
     override public init() {
         super.init()
@@ -15,7 +16,8 @@ public class NetworkRecommendationRepository: NSObject, RecommendationRepository
     public func findRecommendation() -> Future<Restaurant, NSError> {
         let promise = Promise<Restaurant, NSError>()
 
-        let body = ["blacklist": ["ids":[AnyObject]()]]
+        let ids = userDefaults.getBlacklistIds()
+        let body = ["blacklist": ["ids":ids]]
 
         let urlRequest = URLRequest.post(
             urlString: self.apiBase + "/recommendations",

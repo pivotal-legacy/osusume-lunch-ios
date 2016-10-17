@@ -8,11 +8,13 @@ class NetworkRecommendationRepositoryTests: XCTestCase {
     var promise = Promise<NSDictionary, NSError>()
     var networkSession = FakeNetworkSession()
     var repository = NetworkRecommendationRepository()
+    var userDefaults = FakeUserDefaults()
 
     override func setUp() {
         super.setUp()
 
         self.repository.networkSession = self.networkSession
+        self.repository.userDefaults = self.userDefaults
         self.networkSession.dataTaskReturnValue = self.promise.future
     }
 
@@ -40,6 +42,7 @@ class NetworkRecommendationRepositoryTests: XCTestCase {
 
         future.onComplete(callback: { result in
             expectation.fulfill()
+            XCTAssertTrue(self.userDefaults.getBlacklistIdsWasCalled)
             XCTAssertEqual(expectedRestaurantName, result.value?.name)
         })
 
