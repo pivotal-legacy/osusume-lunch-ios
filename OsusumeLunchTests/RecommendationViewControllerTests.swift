@@ -7,16 +7,19 @@ import OsusumeNetworking
 class RecommendationViewControllerTests: XCTestCase {
     var recommendationViewController: RecommendationViewController!
     var fakeRecommendationRepository: FakeRecommendationRepository!
+    var fakeRouter: FakeRouter!
 
     override func setUp() {
         super.setUp()
 
         self.fakeRecommendationRepository = FakeRecommendationRepository()
+        self.fakeRouter = FakeRouter()
 
-        self.recommendationViewController = RecommendationViewController()
+        self.recommendationViewController = RecommendationViewController(router: self.fakeRouter)
         self.recommendationViewController.recommendationRepository = self.fakeRecommendationRepository
     }
 
+    // MARK: - Setup Subviews Tests
     func test_recommendationButtonIsAddedToSubview() {
         let button = self.recommendationViewController.recommendationButton
         XCTAssertTrue(self.recommendationViewController.view.subviews.contains(button))
@@ -55,17 +58,7 @@ class RecommendationViewControllerTests: XCTestCase {
         XCTAssertEqual(rightBarButton?.accessibilityIdentifier, "show restaurants button")
     }
 
-    func test_tappingShowRestaurantsButtonShowsRestaurantsScreen() {
-
-        let rightBarButton = self.recommendationViewController.navigationItem.rightBarButtonItem
-
-        self.recommendationViewController.perform(rightBarButton?.action)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            XCTAssertTrue(self.recommendationViewController.navigationController!.viewControllers.last is RestaurantTableViewController)
-        })
-    }
-
+    // MARK: - Action Tests
     func test_tappingRecommendationButtonDisplaysTextInLabelOnSuccess() {
         let expectedRestaurantName = "Butagumi"
         
@@ -104,5 +97,14 @@ class RecommendationViewControllerTests: XCTestCase {
         })
 
         self.waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    func test_tappingShowRestaurantsButtonShowsRestaurantsScreen() {
+
+        let rightBarButton = self.recommendationViewController.navigationItem.rightBarButtonItem
+
+        self.recommendationViewController.perform(rightBarButton?.action)
+
+        XCTAssertTrue(self.fakeRouter.showScreenAsModalWasCalled)
     }
 }

@@ -17,14 +17,12 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        self.restaurantTableViewController = RestaurantTableViewController()
+        self.router = FakeRouter()
+        self.restaurantTableViewController = RestaurantTableViewController(router: self.router)
         self.navController = UINavigationController(rootViewController: self.restaurantTableViewController)
 
         let repository = FakeRestaurantRepository()
         self.promise = Promise<[Restaurant], NSError>()
-
-        self.router = FakeRouter()
-        self.restaurantTableViewController.router = router
 
         self.restaurantTableViewController.restaurantRepository = repository
         repository.getAllRestaurantsReturnValue = self.promise
@@ -32,6 +30,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     }
 
+    // MARK: - View Setup Tests
     func test_navigationBarHasCorrectItems() {
         let title = self.restaurantTableViewController.navigationItem.title
         let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
@@ -42,13 +41,6 @@ class RestaurantTableViewControllerTests: XCTestCase {
         XCTAssertEqual(leftButton?.accessibilityIdentifier, "add new restaurant")
     }
 
-
-    func test_tappingDoneButtonDismissesSelf() {
-        let doneButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
-        self.restaurantTableViewController.perform(doneButton?.action)
-
-        XCTAssertTrue(self.router.dismissModalWasCalled)
-    }
 
     func test_didGetAllRestaurantsWhenSuccess() {
         self.promise.success(self.expectedRestaurants)
@@ -125,4 +117,14 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
         XCTAssertTrue(cell != nil)
     }
+
+
+    // MARK: - Actions Tests
+    func test_tappingDoneButtonDismissesSelf() {
+        let doneButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+        self.restaurantTableViewController.perform(doneButton?.action)
+
+        XCTAssertTrue(self.router.dismissModalWasCalled)
+    }
+
 }

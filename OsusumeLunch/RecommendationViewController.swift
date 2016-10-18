@@ -8,8 +8,11 @@ class RecommendationViewController: UIViewController {
     var recommendationButton = AutoLayoutButton()
     var recommendationLabel = AutoLayoutLabel()
     var recommendationRepository: RecommendationRepository = NetworkRecommendationRepository()
+    let router: Router
 
-    init() {
+    init(router: Router) {
+        self.router = router
+
         super.init(nibName: nil, bundle: nil)
 
         self.setupNavigationItems()
@@ -76,7 +79,7 @@ class RecommendationViewController: UIViewController {
     }
 
     func showRestaurants() {
-        let viewController = UINavigationController(rootViewController: RestaurantTableViewController())
-        self.navigationController?.present(viewController, animated: true, completion: nil)
+        let restaurantsScreen = RestaurantTableViewController(router: self.router)
+        self.router.showScreenAsModal(viewController: restaurantsScreen, animated: true)
     }
 }

@@ -6,9 +6,17 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - Properties
     var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
     var restaurants: [Restaurant] = [Restaurant]()
-    var router: Router = NavigationRouter() 
-
+    var router: Router
     let cellReuseIdentifier = "restaurantTableViewCell"
+
+    init(router: Router) {
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -36,7 +44,7 @@ class RestaurantTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.add,
             target: self,
-            action: #selector(self.showNewRetaurantScreen))
+            action: #selector(self.showNewRestaurantScreen))
         self.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "add new restaurant"
     }
 
@@ -73,10 +81,6 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     func done() {
-        self.router.dismissModal(navigationController: self.navigationController!)
-    }
-
-    func showNewRetaurantScreen() {
-
+        self.router.dismissModal(navigationController: self.navigationController!, animated: true)
     }
 }
