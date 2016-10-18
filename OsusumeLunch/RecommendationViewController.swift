@@ -76,6 +76,7 @@ class RecommendationViewController: UIViewController {
     }
 
     func showRestaurants() {
-        self.navigationController?.pushViewController(RestaurantTableViewController(), animated: true)
+        let viewController = UINavigationController(rootViewController: RestaurantTableViewController())
+        self.navigationController?.present(viewController, animated: true, completion: nil)
     }
 }

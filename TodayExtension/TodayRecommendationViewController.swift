@@ -5,7 +5,7 @@ import Result
 import OsusumeNetworking
 
 @objc(TodayRecommendationViewController)
-class TodayRecommendationViewController: UIViewController, NCWidgetProviding, UIGestureRecognizerDelegate {
+class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
 
     // MARK: - Properties
     var label = UILabel()
@@ -52,7 +52,6 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding, UI
     // MARK: - View Setup
     private func setupActionHandlers() {
         let recognizer = UITapGestureRecognizer.init(target: self, action: #selector(self.didTapView))
-        recognizer.delegate = self
         self.view.addGestureRecognizer(recognizer)
     }
 

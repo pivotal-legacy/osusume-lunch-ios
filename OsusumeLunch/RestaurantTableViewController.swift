@@ -6,6 +6,7 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - Properties
     var restaurantRepository: RestaurantRepository = NetworkRestaurantRepository()
     var restaurants: [Restaurant] = [Restaurant]()
+    var router: Router = NavigationRouter() 
 
     let cellReuseIdentifier = "restaurantTableViewCell"
 
@@ -24,13 +25,12 @@ class RestaurantTableViewController: UITableViewController {
 
     // MARK: - View Setup
     private func setupNavbar() {
-        self.navigationItem.title = "Filter"
+        self.navigationItem.title = "Lunch Spots"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: UIBarButtonSystemItem.add,
+            barButtonSystemItem: UIBarButtonSystemItem.done,
             target: self,
-            action: #selector(self.showNewRestaurantScreen)
-        )
-        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "add restaurant button"
+            action: #selector(self.done))
+        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "done"
     }
 
     // MARK: - Table view data source
@@ -63,5 +63,9 @@ class RestaurantTableViewController: UITableViewController {
     @objc
     private func showNewRestaurantScreen() {
         self.navigationController?.pushViewController(NewRestaurantViewController(), animated: true)
+    }
+
+    func done() {
+        self.router.dismissModal(navigationController: self.navigationController!)
     }
 }

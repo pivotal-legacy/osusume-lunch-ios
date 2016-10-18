@@ -5,8 +5,10 @@ import OsusumeNetworking
 @testable import OsusumeLunch
 
 class RestaurantTableViewControllerTests: XCTestCase {
+    var navController: UINavigationController!
     var restaurantTableViewController: RestaurantTableViewController!
     var promise: Promise<[Restaurant], NSError>!
+    var router: FakeRouter!
 
     let expectedRestaurants: [Restaurant] = [
         Restaurant(id: 1, name: "Afuri"),
@@ -15,11 +17,14 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-
         self.restaurantTableViewController = RestaurantTableViewController()
+        self.navController = UINavigationController(rootViewController: self.restaurantTableViewController)
 
         let repository = FakeRestaurantRepository()
         self.promise = Promise<[Restaurant], NSError>()
+
+        self.router = FakeRouter()
+        self.restaurantTableViewController.router = router
 
         self.restaurantTableViewController.restaurantRepository = repository
         repository.getAllRestaurantsReturnValue = self.promise
@@ -27,19 +32,20 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     }
 
-    func test_navigationBarHasAddButton() {
-        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+    func test_navigationBarHasCorrectItems() {
+        let title = self.restaurantTableViewController.navigationItem.title
+        let leftButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
 
-        XCTAssertEqual(rightButton?.accessibilityIdentifier, "add restaurant button")
+        XCTAssertEqual(title, "Lunch Spots")
+        XCTAssertEqual(leftButton?.accessibilityIdentifier, "done")
     }
 
-    func test_tappingAddRestaurantButtonDisplaysNewRestaurantScreen() {
-        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
-        self.restaurantTableViewController.perform(rightButton?.action)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            XCTAssertTrue(self.restaurantTableViewController.navigationController?.viewControllers.last is NewRestaurantViewController)
-        })
+    func test_tappingDoneButtonDismissesSelf() {
+        let doneButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+        self.restaurantTableViewController.perform(doneButton?.action)
+
+        XCTAssertTrue(self.router.dismissModalWasCalled)
     }
 
     func test_didGetAllRestaurantsWhenSuccess() {
