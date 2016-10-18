@@ -34,10 +34,12 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
     func test_navigationBarHasCorrectItems() {
         let title = self.restaurantTableViewController.navigationItem.title
-        let leftButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
+        let leftButton = self.restaurantTableViewController.navigationItem.leftBarButtonItem
 
         XCTAssertEqual(title, "Lunch Spots")
-        XCTAssertEqual(leftButton?.accessibilityIdentifier, "done")
+        XCTAssertEqual(rightButton?.accessibilityIdentifier, "done")
+        XCTAssertEqual(leftButton?.accessibilityIdentifier, "add new restaurant")
     }
 
 

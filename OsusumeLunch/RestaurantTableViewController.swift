@@ -26,11 +26,18 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - View Setup
     private func setupNavbar() {
         self.navigationItem.title = "Lunch Spots"
+
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.done,
             target: self,
             action: #selector(self.done))
         self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "done"
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.add,
+            target: self,
+            action: #selector(self.showNewRetaurantScreen))
+        self.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "add new restaurant"
     }
 
     // MARK: - Table view data source
@@ -67,5 +74,9 @@ class RestaurantTableViewController: UITableViewController {
 
     func done() {
         self.router.dismissModal(navigationController: self.navigationController!)
+    }
+
+    func showNewRetaurantScreen() {
+
     }
 }
