@@ -22,48 +22,39 @@ class NewRestaurantViewControllerTests: XCTestCase {
     func test_pageRendersTitle() {
         let navigationTite = self.viewController.navigationItem.title!
 
-        XCTAssertEqual(navigationTite, "New Restaurant")
+        XCTAssertEqual(navigationTite, "Add Spot")
     }
 
     func test_hasViewComponents() {
-        let label = self.viewController.nameTextFieldLabel
         let textField = self.viewController.nameTextField
-        let button = self.viewController.saveButton
 
-        XCTAssertTrue(self.viewController.view.subviews.contains(label))
         XCTAssertTrue(self.viewController.view.subviews.contains(textField))
-        XCTAssertTrue(self.viewController.view.subviews.contains(button))
     }
 
     func test_componentsHasCorrectTitle() {
-        let label = self.viewController.nameTextFieldLabel
-        let button = self.viewController.saveButton
+        let textField = self.viewController.nameTextField
 
-        XCTAssertEqual(label.text, "Name")
-        XCTAssertEqual(button.titleLabel?.text, "Save")
+        XCTAssertEqual(textField.placeholder, "Name")
     }
 
-    func test_labelHasConstraints() {
-        let labelConstraintCount = ConstraintChecker.constraintCount(subview: self.viewController.nameTextFieldLabel)
+    func test_textFieldIsFirstResponder() {
+        let window = UIWindow()
+        window.addSubview(self.viewController.view)
+
+        let textField = self.viewController.nameTextField
+
+        XCTAssertTrue(textField.isFirstResponder)
+    }
+
+    func test_textFieldKeyboardHasDoneLabel() {
+        let textField = self.viewController.nameTextField
+
+        XCTAssertEqual(textField.returnKeyType, UIReturnKeyType.done)
+    }
+
+    func test_componentsHaveConstraints() {
         let textFieldConstraintCount = ConstraintChecker.constraintCount(subview: self.viewController.nameTextField)
-        let buttonConstraintCount = ConstraintChecker.constraintCount(subview: self.viewController.saveButton)
 
-        XCTAssertTrue(labelConstraintCount > 0)
         XCTAssertTrue(textFieldConstraintCount > 0)
-        XCTAssertTrue(buttonConstraintCount > 0 )
-    }
-
-    func test_tappingSaveButtonCallsCreateRestaurant() {
-        self.viewController.nameTextField.text = "Afuri"
-        self.viewController.saveButton.sendActions(for: UIControlEvents.touchUpInside)
-
-        XCTAssertTrue(self.fakeRestaurantRepository.createRestaurantWasCalled)
-    }
-
-    func test_tappingSaveButtonDoesNotCallCreateRestaurant_whenNameNotSpecified() {
-        self.viewController.nameTextField.text = ""
-        self.viewController.saveButton.sendActions(for: UIControlEvents.touchUpInside)
-
-        XCTAssertFalse(self.fakeRestaurantRepository.createRestaurantWasCalled)
     }
 }
