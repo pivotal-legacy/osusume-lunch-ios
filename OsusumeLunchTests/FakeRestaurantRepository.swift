@@ -13,9 +13,11 @@ class FakeRestaurantRepository: RestaurantRepository {
     }
 
     var createRestaurantWasCalled = false
+    var createRestaurantArgs = ""
     var createRestaurantReturnValue = Promise<Restaurant, NSError>()
     func createRestaurant(name: String) -> Future<Restaurant, NSError> {
         self.createRestaurantWasCalled = true
+        self.createRestaurantArgs = name
         return self.createRestaurantReturnValue.future
     }
 }

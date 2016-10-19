@@ -3,13 +3,15 @@ import XCTest
 @testable import OsusumeLunch
 
 class NewRestaurantViewControllerTests: XCTestCase {
-    let viewController = NewRestaurantViewController()
+    var viewController: NewRestaurantViewController!
     var fakeRestaurantRepository: FakeRestaurantRepository!
+    var fakeRouter = FakeRouter()
     
 
     override func setUp() {
         super.setUp()
 
+        self.viewController = NewRestaurantViewController(router: fakeRouter)
         self.fakeRestaurantRepository = FakeRestaurantRepository()
         self.viewController.restaurantRepository = self.fakeRestaurantRepository
         self.viewController.view.setNeedsLayout()
@@ -56,5 +58,22 @@ class NewRestaurantViewControllerTests: XCTestCase {
         let textFieldConstraintCount = ConstraintChecker.constraintCount(subview: self.viewController.nameTextField)
 
         XCTAssertTrue(textFieldConstraintCount > 0)
+    }
+
+    func test_saveRestaurantAndDismiss_callsCreateRestaurant() {
+        self.viewController.nameTextField.text = "Afuri"
+
+        self.viewController.saveRestaurantAndDismiss()
+
+        XCTAssertTrue(self.fakeRestaurantRepository.createRestaurantWasCalled)
+        XCTAssertEqual(self.fakeRestaurantRepository.createRestaurantArgs, "Afuri")
+    }
+
+    func test_saveRestaurantAndDismiss_dismissNewRestaurantViewController() {
+        self.viewController.nameTextField.text = "Afuri"
+
+        self.viewController.saveRestaurantAndDismiss()
+
+        XCTAssertTrue(self.fakeRouter.popScreenWasCalled)
     }
 }

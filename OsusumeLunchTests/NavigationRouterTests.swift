@@ -54,6 +54,20 @@ class NavigationRouterTests: XCTestCase {
         XCTAssertTrue(rootNavigationController.topViewController === screen1)
     }
 
+    func test_popScreen_popsScreenFromTopNavigationController() {
+        configureUIWindowWithRootViewController()
+
+        let baseViewController = UIViewController()
+        let navController = UINavigationController(rootViewController: baseViewController)
+        rootNavigationController.present(navController, animated: false, completion: nil)
+
+        navController.pushViewController(UIViewController(), animated: false)
+
+        navigationRouter.popScreen(animated: false)
+
+        XCTAssertTrue(navController.topViewController === baseViewController)
+    }
+
     func test_showScreenAsModal_showsScreenAsModal() {
         configureUIWindowWithRootViewController()
 
