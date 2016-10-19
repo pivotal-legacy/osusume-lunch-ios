@@ -23,6 +23,7 @@ class RestaurantTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.setupNavbar()
+        self.setToolbar()
         self.tableView.register(
             RestaurantWhitelistTableViewCell.self,
             forCellReuseIdentifier: String(describing: RestaurantWhitelistTableViewCell.self)
@@ -46,6 +47,20 @@ class RestaurantTableViewController: UITableViewController {
             target: self,
             action: #selector(self.showNewRestaurantScreen))
         self.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "add new restaurant"
+    }
+
+    private func setToolbar() {
+        self.navigationController?.setToolbarHidden(false, animated: false)
+
+        let flexible = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,
+            target: self,
+            action: nil
+        )
+        let editButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.changeToEditMode))
+        editButtonItem.accessibilityIdentifier = "edit"
+
+        self.setToolbarItems([flexible, editButtonItem], animated: false)
     }
 
     // MARK: - Table view data source
@@ -82,5 +97,9 @@ class RestaurantTableViewController: UITableViewController {
 
     func done() {
         self.router.dismissModal(navigationController: self.navigationController!, animated: true)
+    }
+
+    func changeToEditMode() {
+
     }
 }
