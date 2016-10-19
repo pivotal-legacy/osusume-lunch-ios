@@ -28,6 +28,10 @@ class RestaurantTableViewController: UITableViewController {
             RestaurantWhitelistTableViewCell.self,
             forCellReuseIdentifier: String(describing: RestaurantWhitelistTableViewCell.self)
         )
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
         self.getAllRestaurants()
     }

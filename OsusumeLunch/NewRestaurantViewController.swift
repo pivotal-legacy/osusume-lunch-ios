@@ -63,7 +63,6 @@ class NewRestaurantViewController: UIViewController, UITextFieldDelegate {
         guard let name = self.nameTextField.text, name != "" else {
             return
         }
-        self.nameTextField.resignFirstResponder()
         self.restaurantRepository.createRestaurant(name: name)
         self.router.popScreen(animated: true)
     }

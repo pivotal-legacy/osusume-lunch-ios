@@ -50,6 +50,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
 
     func test_didGetAllRestaurantsWhenSuccess() {
+        self.restaurantTableViewController.viewDidAppear(false)
         self.promise.success(self.expectedRestaurants)
 
         let expectation = self.expectation(description: "Wait for async call")
@@ -64,6 +65,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
     }
 
     func test_didGetAllRestaurantsWhenFailure() {
+        self.restaurantTableViewController.viewDidAppear(false)
         self.restaurantTableViewController.restaurants = [Restaurant(id: 1, name: "Afuri")]
 
         self.promise.failure(NSError(domain: "RestaurantTableViewController_getAllRestaurants", code: 0, userInfo: nil))
@@ -78,6 +80,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
         self.waitForExpectations(timeout: 1, handler: nil)
     }
 
+    // MARK: - TableView Datasource
     func test_tableViewCellsHaveRestaurantData() {
         self.restaurantTableViewController.restaurants = self.expectedRestaurants
 
@@ -103,7 +106,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
         XCTAssertEqual(self.restaurantTableViewController.tableView.numberOfRows(inSection: 0), 0)
 
         self.restaurantTableViewController.restaurants = self.expectedRestaurants
-        self.restaurantTableViewController.viewWillAppear(false)
+        self.restaurantTableViewController.viewDidAppear(false)
 
         self.promise.success(self.expectedRestaurants)
 
