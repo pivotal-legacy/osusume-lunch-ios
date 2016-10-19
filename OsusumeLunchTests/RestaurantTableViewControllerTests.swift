@@ -118,13 +118,13 @@ class RestaurantTableViewControllerTests: XCTestCase {
         XCTAssertTrue(cell != nil)
     }
 
-
     // MARK: - Actions Tests
     func test_tappingDoneButtonDismissesSelf() {
         let doneButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem
         self.restaurantTableViewController.perform(doneButton?.action)
 
         XCTAssertTrue(self.router.dismissModalWasCalled)
+        XCTAssertTrue(self.router.dismissModalArg === self.restaurantTableViewController.navigationController)
     }
 
 }

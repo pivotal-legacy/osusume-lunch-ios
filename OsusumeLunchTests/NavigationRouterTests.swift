@@ -15,22 +15,22 @@ class NavigationRouterTests: XCTestCase {
         )
     }
     
-    func test_setScreen_showsRecommendationScreen() {
-        let recommendationScreen = RecommendationViewController(router: self.navigationRouter)
-        navigationRouter.setScreen(viewController: recommendationScreen, animated: false)
+    func test_setScreen_showsScreen() {
+        let screen = UIViewController()
+        navigationRouter.setScreen(viewController: screen, animated: false)
 
-        XCTAssertTrue(self.rootNavigationController.topViewController is RecommendationViewController)
+        XCTAssertTrue(self.rootNavigationController.topViewController === screen)
     }
 
-    func test_showScreenAsModal_showsRestaurantScreenAsModal() {
+    func test_showScreenAsModal_showsScreenAsModal() {
         configureUIWindowWithRootViewController()
 
-        let restaurantsScreen = RestaurantTableViewController(router: self.navigationRouter)
-        navigationRouter.showScreenAsModal(viewController: restaurantsScreen, animated: false)
+        let screen = UIViewController()
+        navigationRouter.showScreenAsModal(viewController: screen, animated: false)
 
-        let restaurantsNavController = rootNavigationController.presentedViewController as? UINavigationController
+        let navController = rootNavigationController.presentedViewController as? UINavigationController
 
-        XCTAssertTrue(restaurantsNavController?.topViewController is RestaurantTableViewController)
+        XCTAssertTrue(navController?.topViewController === screen)
     }
 
     func test_dismissModal_dismissCurrentNavigationController() {

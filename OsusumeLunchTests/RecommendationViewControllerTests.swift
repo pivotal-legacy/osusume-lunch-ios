@@ -106,5 +106,6 @@ class RecommendationViewControllerTests: XCTestCase {
         self.recommendationViewController.perform(rightBarButton?.action)
 
         XCTAssertTrue(self.fakeRouter.showScreenAsModalWasCalled)
+        XCTAssertTrue(self.fakeRouter.showScreenAsModalArg is RestaurantTableViewController)
     }
 }
