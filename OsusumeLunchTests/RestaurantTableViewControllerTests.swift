@@ -134,4 +134,11 @@ class RestaurantTableViewControllerTests: XCTestCase {
         XCTAssertTrue(self.router.dismissModalArg === self.restaurantTableViewController.navigationController)
     }
 
+    func test_tappingAddButtonCallsPushScreen() {
+        let addButton = self.restaurantTableViewController.navigationItem.leftBarButtonItem
+        self.restaurantTableViewController.perform(addButton?.action)
+
+        XCTAssertTrue(self.router.pushScreenWasCalled)
+        XCTAssertTrue(self.router.pushScreenArg is NewRestaurantViewController)
+    }
 }

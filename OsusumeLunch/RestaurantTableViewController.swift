@@ -92,7 +92,7 @@ class RestaurantTableViewController: UITableViewController {
 
     @objc
     private func showNewRestaurantScreen() {
-        self.navigationController?.pushViewController(NewRestaurantViewController(), animated: true)
+        self.router.pushScreen(viewController: NewRestaurantViewController(), animated: true)
     }
 
     func done() {

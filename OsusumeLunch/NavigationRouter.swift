@@ -12,6 +12,18 @@ class NavigationRouter: Router {
         navigationController.setViewControllers([viewController], animated: animated)
     }
 
+    func pushScreen(viewController: UIViewController, animated: Bool) {
+        if let topNavController = self.navigationController.presentedViewController as? UINavigationController {
+            topNavController.pushViewController(viewController, animated: animated)
+        } else {
+            self.navigationController.pushViewController(viewController, animated: animated)
+        }
+    }
+
+    func popScreen(animated: Bool) {
+        navigationController.popViewController(animated: animated)
+    }
+
     func showScreenAsModal(viewController: UIViewController, animated: Bool) {
         let newNavigationController = UINavigationController(rootViewController: viewController)
         navigationController.present(newNavigationController, animated: animated, completion: nil)

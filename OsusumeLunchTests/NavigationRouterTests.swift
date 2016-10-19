@@ -22,6 +22,38 @@ class NavigationRouterTests: XCTestCase {
         XCTAssertTrue(self.rootNavigationController.topViewController === screen)
     }
 
+    func test_pushScreen_pushesScreenOnModal() {
+        configureUIWindowWithRootViewController()
+
+        let navController = UINavigationController(rootViewController: UIViewController())
+        self.rootNavigationController.present(navController, animated: false, completion: nil)
+
+        let screen = UIViewController()
+        navigationRouter.pushScreen(viewController: screen, animated: false)
+
+        XCTAssertTrue(navController.topViewController === screen)
+    }
+
+    func test_pushScreen_pushesScreen() {
+        let screen = UIViewController()
+        navigationRouter.pushScreen(viewController: screen, animated: false)
+
+        XCTAssertTrue(rootNavigationController.topViewController === screen)
+    }
+
+    func test_popScreen_popsScreen() {
+        let screen1 = UIViewController()
+        let screen2 = UIViewController()
+        rootNavigationController.setViewControllers(
+            [screen1, screen2],
+            animated: false
+        )
+
+        navigationRouter.popScreen(animated: false)
+
+        XCTAssertTrue(rootNavigationController.topViewController === screen1)
+    }
+
     func test_showScreenAsModal_showsScreenAsModal() {
         configureUIWindowWithRootViewController()
 
@@ -52,7 +84,7 @@ class NavigationRouterTests: XCTestCase {
         XCTAssertNil(self.rootNavigationController.presentedViewController)
     }
 
-    func configureUIWindowWithRootViewController() {
+    private func configureUIWindowWithRootViewController() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let window: UIWindow = appDelegate.window!
         window.rootViewController = rootNavigationController
