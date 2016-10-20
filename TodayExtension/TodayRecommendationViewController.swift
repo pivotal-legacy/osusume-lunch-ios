@@ -83,9 +83,7 @@ class TodayRecommendationViewController: UIViewController, NCWidgetProviding {
     }
 
     func didTapView() {
-        let url = URL(string: "osusumeLunch://")
-        if let appurl = url {
-            self.extensionContext!.open(appurl, completionHandler: nil)
-        }
+        print("tap view")
+        self.getRecommendation()
     }
 }

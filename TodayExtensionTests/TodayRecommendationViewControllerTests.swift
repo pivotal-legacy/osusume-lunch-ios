@@ -9,11 +9,14 @@ import OsusumeNetworking
 
 class TodayRecommendationViewControllerTests: XCTestCase {
     var todayRecommendationViewController: TodayRecommendationViewController!
+    let fakeRecommendationRepository = FakeRecommendationRepository()
+
 
     override func setUp() {
         super.setUp()
 
         self.todayRecommendationViewController = TodayRecommendationViewController()
+        self.todayRecommendationViewController.recommendationRepository = fakeRecommendationRepository
         self.todayRecommendationViewController.view.setNeedsLayout()
     }
 
@@ -44,11 +47,6 @@ class TodayRecommendationViewControllerTests: XCTestCase {
     }
 
     func test_getRecommendationUpdatesLabelOnSuccess() {
-
-        let fakeRecommendationRepository = FakeRecommendationRepository()
-
-        self.todayRecommendationViewController.recommendationRepository = fakeRecommendationRepository
-
         let expectedRestaurantName = "Butagumi"
 
         let promise = Promise<Restaurant, NSError>()
@@ -62,7 +60,27 @@ class TodayRecommendationViewControllerTests: XCTestCase {
         promise.future.onComplete(callback: { result in
             waitExpectation.fulfill()
 
-            XCTAssertTrue(fakeRecommendationRepository.findRecommendationWasCalled)
+            XCTAssertTrue(self.fakeRecommendationRepository.findRecommendationWasCalled)
+            XCTAssertEqual(self.todayRecommendationViewController.label.text, expectedRestaurantName)
+        })
+
+        self.waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    func test_didTapView_updatesLabelOnGetRecommendationSuccessful() {
+        let expectedRestaurantName = "Afuri"
+
+        let promise = Promise<Restaurant, NSError>()
+        promise.success(Restaurant(id: 1, name: expectedRestaurantName))
+        fakeRecommendationRepository.findRecommendationReturnValue = promise
+
+        self.todayRecommendationViewController.didTapView()
+
+        let waitExpectation = self.expectation(description: "wait for async call")
+        promise.future.onComplete(callback: {_ in 
+            waitExpectation.fulfill()
+
+            XCTAssertTrue(self.fakeRecommendationRepository.findRecommendationWasCalled)
             XCTAssertEqual(self.todayRecommendationViewController.label.text, expectedRestaurantName)
         })
 
