@@ -61,10 +61,9 @@ class RestaurantTableViewController: UITableViewController {
             target: self,
             action: nil
         )
-        let editButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.changeToEditMode))
-        editButtonItem.accessibilityIdentifier = "edit"
 
-        self.setToolbarItems([flexible, editButtonItem], animated: false)
+        self.editButtonItem.accessibilityIdentifier = "edit"
+        self.setToolbarItems([flexible, self.editButtonItem], animated: false)
     }
 
     // MARK: - Table view data source
@@ -104,9 +103,5 @@ class RestaurantTableViewController: UITableViewController {
 
     func done() {
         self.router.dismissModal(navigationController: self.navigationController!, animated: true)
-    }
-
-    func changeToEditMode() {
-
     }
 }

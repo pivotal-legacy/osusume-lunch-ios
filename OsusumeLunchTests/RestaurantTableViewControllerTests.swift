@@ -45,6 +45,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
         let toolbarItems = self.restaurantTableViewController.toolbarItems!
 
         XCTAssertFalse(self.restaurantTableViewController.navigationController!.isToolbarHidden)
+        XCTAssertTrue(toolbarItems.contains(where: {$0 === self.restaurantTableViewController.editButtonItem}))
         XCTAssertTrue(toolbarItems.contains(where: {$0.accessibilityIdentifier == "edit"}))
     }
 
