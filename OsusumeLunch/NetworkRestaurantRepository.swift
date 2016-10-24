@@ -76,4 +76,7 @@ public class NetworkRestaurantRepository: NSObject, RestaurantRepository {
             }
         return promise.future
     }
+
+    public func deleteRestaurant(id: Int) {
+    }
 }

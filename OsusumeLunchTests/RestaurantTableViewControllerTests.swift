@@ -8,6 +8,7 @@ class RestaurantTableViewControllerTests: XCTestCase {
     var navController: UINavigationController!
     var restaurantTableViewController: RestaurantTableViewController!
     var promise: Promise<[Restaurant], NSError>!
+    var repository: FakeRestaurantRepository!
     var router: FakeRouter!
 
     let expectedRestaurants: [Restaurant] = [
@@ -21,11 +22,11 @@ class RestaurantTableViewControllerTests: XCTestCase {
         self.restaurantTableViewController = RestaurantTableViewController(router: self.router)
         self.navController = UINavigationController(rootViewController: self.restaurantTableViewController)
 
-        let repository = FakeRestaurantRepository()
+        self.repository = FakeRestaurantRepository()
         self.promise = Promise<[Restaurant], NSError>()
 
-        self.restaurantTableViewController.restaurantRepository = repository
-        repository.getAllRestaurantsReturnValue = self.promise
+        self.restaurantTableViewController.restaurantRepository = self.repository
+        self.repository.getAllRestaurantsReturnValue = self.promise
         self.restaurantTableViewController.view.setNeedsLayout()
 
     }
@@ -144,5 +145,27 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
         XCTAssertTrue(self.router.pushScreenWasCalled)
         XCTAssertTrue(self.router.pushScreenArg is NewRestaurantViewController)
+    }
+
+    func test_deleteSpecificRestaurant_callsDeleteRestaurant() {
+        self.restaurantTableViewController.restaurants = expectedRestaurants
+        self.restaurantTableViewController.tableView(
+            self.restaurantTableViewController.tableView,
+            commit: UITableViewCellEditingStyle.delete,
+            forRowAt: IndexPath(row: 0, section: 0))
+
+        XCTAssertTrue(self.repository.deleteRestaurantWasCalled)
+        XCTAssertEqual(self.repository.deleteRestaurantArgs, expectedRestaurants[0].id)
+    }
+
+    func test_deleteSpecificRestaurant_updateRestaurantsElement() {
+        self.restaurantTableViewController.restaurants = self.expectedRestaurants
+        self.restaurantTableViewController.tableView(
+            self.restaurantTableViewController.tableView,
+            commit: UITableViewCellEditingStyle.delete,
+            forRowAt: IndexPath(row: 0, section: 0))
+
+        XCTAssertEqual(self.restaurantTableViewController.restaurants.count, expectedRestaurants.count - 1)
+        XCTAssertFalse(self.restaurantTableViewController.restaurants.contains(self.expectedRestaurants[0]))
     }
 }

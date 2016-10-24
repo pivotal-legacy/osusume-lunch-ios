@@ -79,6 +79,15 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let id = restaurants[indexPath.row].id
+            self.restaurantRepository.deleteRestaurant(id: id)
+            self.restaurants.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
+        }
+    }
+
     // MARK: - Action
     private func getAllRestaurants() {
         self.restaurantRepository.getAllRestaurants()

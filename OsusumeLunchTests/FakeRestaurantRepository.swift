@@ -20,4 +20,11 @@ class FakeRestaurantRepository: RestaurantRepository {
         self.createRestaurantArgs = name
         return self.createRestaurantReturnValue.future
     }
+
+    var deleteRestaurantWasCalled = false
+    var deleteRestaurantArgs = -1
+    func deleteRestaurant(id: Int) {
+        deleteRestaurantWasCalled = true
+        deleteRestaurantArgs = id
+    }
 }
