@@ -6,7 +6,7 @@ class RecommendationViewController: UIViewController {
 
     // MARK: - Properties
     var recommendationButton = AutoLayoutButton()
-    var recommendationLabel = AutoLayoutLabel()
+    var restaurantCardView = RestaurantCardView()
     var recommendationRepository: RecommendationRepository = NetworkRecommendationRepository()
     let router: Router
 
@@ -28,17 +28,26 @@ class RecommendationViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        let margins = self.view.layoutMarginsGuide
+        let mainLayoutGuide = MainLayoutGuide(viewController: self)
 
-        self.recommendationLabel.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.25).isActive = true
-        self.recommendationLabel.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
-        self.recommendationLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        self.recommendationLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        self.restaurantCardView.topAnchor.constraint(
+            equalTo: mainLayoutGuide.topAnchor).isActive = true
+        self.restaurantCardView.leadingAnchor.constraint(
+            equalTo: mainLayoutGuide.leadingAnchor).isActive = true
+        self.restaurantCardView.trailingAnchor.constraint(
+            equalTo: mainLayoutGuide.trailingAnchor).isActive = true
+        self.restaurantCardView.heightAnchor.constraint(
+            equalTo: mainLayoutGuide.heightAnchor, multiplier: 0.5).isActive = true
 
-        self.recommendationButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.5).isActive = true
-        self.recommendationButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        self.recommendationButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        self.recommendationButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20).isActive = true
+        self.recommendationButton.backgroundColor = UIColor.orange
+        self.recommendationButton.heightAnchor.constraint(
+            equalTo: mainLayoutGuide.heightAnchor, multiplier: 0.5).isActive = true
+        self.recommendationButton.leadingAnchor.constraint(
+            equalTo: mainLayoutGuide.leadingAnchor).isActive = true
+        self.recommendationButton.trailingAnchor.constraint(
+            equalTo: mainLayoutGuide.trailingAnchor).isActive = true
+        self.recommendationButton.bottomAnchor.constraint(
+            equalTo: mainLayoutGuide.bottomAnchor).isActive = true
     }
 
     // MARK: - Setup Subviews
@@ -48,9 +57,6 @@ class RecommendationViewController: UIViewController {
     }
 
     private func setupViewComponents() {
-        self.recommendationLabel.textAlignment = .center
-        self.recommendationLabel.textColor = UIColor.purple
-
         let image = UIImage(named: "clickMeImage.png")
         self.recommendationButton.setImage(image, for: .normal)
         self.recommendationButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
@@ -63,18 +69,18 @@ class RecommendationViewController: UIViewController {
     }
 
     private func addSubviews() {
+        self.view.addSubview(self.restaurantCardView)
         self.view.addSubview(self.recommendationButton)
-        self.view.addSubview(self.recommendationLabel)
     }
 
     // MARK: - Actions
     func getRecommendation() {
         self.recommendationRepository.findRecommendation()
             .onSuccess { restaurant in
-                self.recommendationLabel.text = restaurant.name
+                self.restaurantCardView.setRecommendationText(recommendation: restaurant.name)
             }
             .onFailure { error in
-                self.recommendationLabel.text = "Not Found"
+                self.restaurantCardView.setRecommendationText(recommendation: "Not Found")
             }
     }
 

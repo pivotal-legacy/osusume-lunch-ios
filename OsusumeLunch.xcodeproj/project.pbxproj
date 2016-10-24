@@ -51,6 +51,9 @@
 		AE67398A1DA37803000B384B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739751DA34C7D000B384B /* BrightFutures.framework */; };
 		AE67398B1DA37803000B384B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6739761DA34C7D000B384B /* Result.framework */; };
 		AE816AFD1DAF6E8C00888F41 /* TodayRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D75ED1DA4CDB000AD36CB /* TodayRecommendationViewController.swift */; };
+		AEA03A741DBDF10C0014F257 /* MainLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA03A731DBDF10C0014F257 /* MainLayoutGuide.swift */; };
+		AEA03A761DBDF76D0014F257 /* RestaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA03A751DBDF76D0014F257 /* RestaurantCardView.swift */; };
+		AEA03A781DBDFB210014F257 /* RestaurantCardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA03A771DBDFB210014F257 /* RestaurantCardViewTests.swift */; };
 		AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */; };
 		AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */; };
 		AEA260AA1DB06B2D009263F6 /* AutoLayoutTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */; };
@@ -208,6 +211,9 @@
 		AE6739761DA34C7D000B384B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		AE6739881DA37398000B384B /* URLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionTests.swift; path = ../OsusumeNetworkingTests/URLSessionTests.swift; sourceTree = "<group>"; };
 		AE67398E1DA39D9E000B384B /* NetworkRecommendationRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRecommendationRepositoryTests.swift; sourceTree = "<group>"; };
+		AEA03A731DBDF10C0014F257 /* MainLayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLayoutGuide.swift; sourceTree = "<group>"; };
+		AEA03A751DBDF76D0014F257 /* RestaurantCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCardView.swift; sourceTree = "<group>"; };
+		AEA03A771DBDFB210014F257 /* RestaurantCardViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCardViewTests.swift; sourceTree = "<group>"; };
 		AEA260A51DB064C5009263F6 /* NewRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewController.swift; sourceTree = "<group>"; };
 		AEA260A71DB065A3009263F6 /* NewRestaurantViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewControllerTests.swift; sourceTree = "<group>"; };
 		AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutTextField.swift; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 		AE23AAB11DA1FF2A000334D8 /* OsusumeLunchTests */ = {
 			isa = PBXGroup;
 			children = (
+				AEA03A791DBDFB260014F257 /* LayoutComponents */,
 				AEA260AE1DB085A4009263F6 /* Repositories */,
 				AEA260AC1DB08568009263F6 /* ViewControllers */,
 				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
@@ -384,6 +391,8 @@
 				AED7FD311DA7635D00EB87AF /* AutoLayoutSwitch.swift */,
 				AED7FD2F1DA762B500EB87AF /* AutoLayoutTableViewCell.swift */,
 				AEA260A91DB06B2D009263F6 /* AutoLayoutTextField.swift */,
+				AEA03A731DBDF10C0014F257 /* MainLayoutGuide.swift */,
+				AEA03A751DBDF76D0014F257 /* RestaurantCardView.swift */,
 			);
 			name = LayoutComponents;
 			sourceTree = "<group>";
@@ -479,6 +488,14 @@
 			children = (
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AEA03A791DBDFB260014F257 /* LayoutComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AEA03A771DBDFB210014F257 /* RestaurantCardViewTests.swift */,
+			);
+			name = LayoutComponents;
 			sourceTree = "<group>";
 		};
 		AEA260AB1DB0852D009263F6 /* ViewControllers */ = {
@@ -913,6 +930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
+				AEA03A741DBDF10C0014F257 /* MainLayoutGuide.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
 				AEC1668B1DB4C51B005D5D9C /* NavigationRouter.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
@@ -926,6 +944,7 @@
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
 				AEFDC4EE1DA7235500F6B060 /* RestaurantRepository.swift in Sources */,
 				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
+				AEA03A761DBDF76D0014F257 /* RestaurantCardView.swift in Sources */,
 				AED7FD2E1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -941,6 +960,7 @@
 				AEFDC4E91DA644B500F6B060 /* FakeRecommendationRepository.swift in Sources */,
 				AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */,
 				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
+				AEA03A781DBDFB210014F257 /* RestaurantCardViewTests.swift in Sources */,
 				AEF130E41DB5FFC00013A3D5 /* NavigationRouterTests.swift in Sources */,
 				AEC166891DB4C499005D5D9C /* FakeRouter.swift in Sources */,
 				AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */,
