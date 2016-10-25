@@ -11,24 +11,24 @@ class RestaurantCardViewTests: XCTestCase {
         self.restaurantCardView = RestaurantCardView()
     }
     
-    func test_restaurantCardViewHasRecommendationLabel() {
-        let label = self.restaurantCardView.recommendationLabel
+    func test_restaurantCardViewHasLabels() {
+        let titleLabel = self.restaurantCardView.titleLabel
+        let recommendationLabel = self.restaurantCardView.recommendationLabel
 
-        XCTAssert(self.restaurantCardView.subviews.contains(label))
+        XCTAssertTrue(self.restaurantCardView.subviews.contains(titleLabel))
+        XCTAssertTrue(self.restaurantCardView.subviews.contains(recommendationLabel))
     }
 
-    func test_recommendationLabelHasConstraints() {
-        let superViewConstraintCount = ConstraintChecker.superviewConstraintCount(subview: self.restaurantCardView.recommendationLabel)
-        let recommendationLabelConstraintCount = self.restaurantCardView.recommendationLabel.constraints.count
-        let totalConstraintCount = superViewConstraintCount + recommendationLabelConstraintCount
-
-        XCTAssertTrue(totalConstraintCount > 0)
+    func test_labelsHasConstraints() {
+        XCTAssertTrue(ConstraintChecker.constraintCount(subview: self.restaurantCardView.recommendationLabel) > 0)
+        XCTAssertTrue(ConstraintChecker.constraintCount(subview: self.restaurantCardView.titleLabel) > 0)
     }
 
     func test_setRecommendationText_restaurantCardDoesSetRecommendationText() {
         let restaurantName = "Pizzakaya"
         self.restaurantCardView.setRecommendationText(recommendation: restaurantName)
 
+        XCTAssertEqual(self.restaurantCardView.titleLabel.text, self.restaurantCardView.titleString)
         XCTAssertTrue(self.restaurantCardView.recommendationLabel.text == restaurantName)
     }
 }
