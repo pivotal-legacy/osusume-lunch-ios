@@ -354,8 +354,8 @@
 				AEA260AB1DB0852D009263F6 /* ViewControllers */,
 				AE6739651DA24790000B384B /* Xcode Resources */,
 				AE23AA9A1DA1FF2A000334D8 /* AppDelegate.swift */,
-				AEC166861DB4C454005D5D9C /* Router.swift */,
 				AEC1668A1DB4C51B005D5D9C /* NavigationRouter.swift */,
+				AEC166861DB4C454005D5D9C /* Router.swift */,
 			);
 			path = OsusumeLunch;
 			sourceTree = "<group>";
@@ -367,8 +367,8 @@
 				AEA260AE1DB085A4009263F6 /* Repositories */,
 				AEA260AC1DB08568009263F6 /* ViewControllers */,
 				AE51CEE91DA6169800AB45B1 /* AppDelegateTests.swift */,
-				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AEC166881DB4C499005D5D9C /* FakeRouter.swift */,
+				AE23AAB41DA1FF2A000334D8 /* Info.plist */,
 				AEF130E31DB5FFC00013A3D5 /* NavigationRouterTests.swift */,
 			);
 			path = OsusumeLunchTests;
@@ -413,12 +413,12 @@
 				AE2D762B1DA4E31800AD36CB /* NetworkRecommendationRepository.swift */,
 				AE2D762C1DA4E31800AD36CB /* NetworkSession.swift */,
 				AE2D760A1DA4E28500AD36CB /* OsusumeNetworking.h */,
+				AEA260B11DB46919009263F6 /* OsusumeUserDefaults.swift */,
 				AE2D762E1DA4E31800AD36CB /* RecommendationRepository.swift */,
 				AE2D762D1DA4E31800AD36CB /* Restaurant.swift */,
 				AE2D762F1DA4E31800AD36CB /* URLRequest+HttpMethods.swift */,
 				AE2D76301DA4E31800AD36CB /* URLSession+NetworkSession.swift */,
 				AEA260AF1DB468F9009263F6 /* UserDefaultsProtocol.swift */,
-				AEA260B11DB46919009263F6 /* OsusumeUserDefaults.swift */,
 			);
 			path = OsusumeNetworking;
 			sourceTree = "<group>";
@@ -553,8 +553,8 @@
 				AEFDC4E31DA6445700F6B060 /* ConstraintChecker.swift */,
 				AE13E5DB1DA7288A0073D724 /* FakeNetworkSession.swift */,
 				AEFDC4E71DA6449F00F6B060 /* FakeRecommendationRepository.swift */,
-				AEFDC4DD1DA6444600F6B060 /* Info.plist */,
 				AEA260B31DB4694C009263F6 /* FakeUserDefaults.swift */,
+				AEFDC4DD1DA6444600F6B060 /* Info.plist */,
 			);
 			path = SharedTestUtilities;
 			sourceTree = "<group>";
@@ -930,22 +930,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE23AA9B1DA1FF2A000334D8 /* AppDelegate.swift in Sources */,
-				AEA03A741DBDF10C0014F257 /* MainLayoutGuide.swift in Sources */,
 				AE6739611DA2265B000B384B /* AutoLayoutButton.swift in Sources */,
-				AEC1668B1DB4C51B005D5D9C /* NavigationRouter.swift in Sources */,
 				AE2D75E11DA48DA100AD36CB /* AutoLayoutLabel.swift in Sources */,
 				AED7FD321DA7635D00EB87AF /* AutoLayoutSwitch.swift in Sources */,
 				AED7FD301DA762B500EB87AF /* AutoLayoutTableViewCell.swift in Sources */,
 				AEA260AA1DB06B2D009263F6 /* AutoLayoutTextField.swift in Sources */,
-				AEC166871DB4C454005D5D9C /* Router.swift in Sources */,
+				AEA03A741DBDF10C0014F257 /* MainLayoutGuide.swift in Sources */,
+				AEC1668B1DB4C51B005D5D9C /* NavigationRouter.swift in Sources */,
 				AEFDC4F01DA723B700F6B060 /* NetworkRestaurantRepository.swift in Sources */,
 				AEA260A61DB064C5009263F6 /* NewRestaurantViewController.swift in Sources */,
 				AE23AAA31DA1FF2A000334D8 /* OsusumeLunch.xcdatamodeld in Sources */,
 				AE0CFC151DA2197000234CF8 /* RecommendationViewController.swift in Sources */,
+				AEA03A761DBDF76D0014F257 /* RestaurantCardView.swift in Sources */,
 				AEFDC4EE1DA7235500F6B060 /* RestaurantRepository.swift in Sources */,
 				AE51CEEC1DA6287500AB45B1 /* RestaurantTableViewController.swift in Sources */,
-				AEA03A761DBDF76D0014F257 /* RestaurantCardView.swift in Sources */,
 				AED7FD2E1DA7627600EB87AF /* RestaurantWhitelistTableViewCell.swift in Sources */,
+				AEC166871DB4C454005D5D9C /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,17 +954,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE51CEEA1DA6169800AB45B1 /* AppDelegateTests.swift in Sources */,
-				AEA260B51DB46965009263F6 /* FakeUserDefaults.swift in Sources */,
 				AEFDC4E51DA6446100F6B060 /* ConstraintChecker.swift in Sources */,
 				AE13E5DD1DA728970073D724 /* FakeNetworkSession.swift in Sources */,
 				AEFDC4E91DA644B500F6B060 /* FakeRecommendationRepository.swift in Sources */,
 				AEFDC4F21DA7247300F6B060 /* FakeRestaurantRepository.swift in Sources */,
-				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
-				AEA03A781DBDFB210014F257 /* RestaurantCardViewTests.swift in Sources */,
-				AEF130E41DB5FFC00013A3D5 /* NavigationRouterTests.swift in Sources */,
 				AEC166891DB4C499005D5D9C /* FakeRouter.swift in Sources */,
+				AEA260B51DB46965009263F6 /* FakeUserDefaults.swift in Sources */,
+				AEF130E41DB5FFC00013A3D5 /* NavigationRouterTests.swift in Sources */,
+				AE13E5DA1DA727CA0073D724 /* NetworkRestaurantRepositoryTests.swift in Sources */,
 				AEA260A81DB065A3009263F6 /* NewRestaurantViewControllerTests.swift in Sources */,
 				AE0CFC131DA2190400234CF8 /* RecommendationViewControllerTests.swift in Sources */,
+				AEA03A781DBDFB210014F257 /* RestaurantCardViewTests.swift in Sources */,
 				AE51CEEE1DA62E0400AB45B1 /* RestaurantTableViewControllerTests.swift in Sources */,
 				AED7FD2C1DA761DC00EB87AF /* RestaurantWhitelistTableViewCellTests.swift in Sources */,
 			);
@@ -992,12 +992,12 @@
 			files = (
 				AE2D76311DA4E31800AD36CB /* NetworkRecommendationRepository.swift in Sources */,
 				AE2D76321DA4E31800AD36CB /* NetworkSession.swift in Sources */,
+				AEA260B21DB46919009263F6 /* OsusumeUserDefaults.swift in Sources */,
 				AE2D76341DA4E31800AD36CB /* RecommendationRepository.swift in Sources */,
 				AE2D76331DA4E31800AD36CB /* Restaurant.swift in Sources */,
-				AEA260B21DB46919009263F6 /* OsusumeUserDefaults.swift in Sources */,
-				AEA260B01DB468F9009263F6 /* UserDefaultsProtocol.swift in Sources */,
 				AE2D76351DA4E31800AD36CB /* URLRequest+HttpMethods.swift in Sources */,
 				AE2D76361DA4E31800AD36CB /* URLSession+NetworkSession.swift in Sources */,
+				AEA260B01DB468F9009263F6 /* UserDefaultsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,8 +1007,8 @@
 			files = (
 				AE13E5DE1DA7289A0073D724 /* FakeNetworkSession.swift in Sources */,
 				AE14B8951DB46FFC00730FE9 /* FakeUserDefaults.swift in Sources */,
-				AE14B8941DB46C5800730FE9 /* OsusumeUserDefaultsTests.swift in Sources */,
 				AE2D763F1DA4EAB400AD36CB /* NetworkRecommendationRepositoryTests.swift in Sources */,
+				AE14B8941DB46C5800730FE9 /* OsusumeUserDefaultsTests.swift in Sources */,
 				AE2D763B1DA4EA1900AD36CB /* URLRequest+HttpMethodsTests.swift in Sources */,
 				AE2D763D1DA4EA8A00AD36CB /* URLSessionTests.swift in Sources */,
 			);

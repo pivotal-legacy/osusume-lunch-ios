@@ -167,5 +167,6 @@ class RestaurantTableViewControllerTests: XCTestCase {
 
         XCTAssertEqual(self.restaurantTableViewController.restaurants.count, expectedRestaurants.count - 1)
         XCTAssertFalse(self.restaurantTableViewController.restaurants.contains(self.expectedRestaurants[0]))
+        XCTAssertEqual(self.restaurantTableViewController.tableView.numberOfRows(inSection: 0), expectedRestaurants.count - 1)
     }
 }

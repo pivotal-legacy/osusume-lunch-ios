@@ -78,5 +78,15 @@ public class NetworkRestaurantRepository: NSObject, RestaurantRepository {
     }
 
     public func deleteRestaurant(id: Int) {
+        let url = URL(string: self.apiBase + "/restaurants/" + id.description)!
+        var request: URLRequest = URLRequest(url: url)
+
+        request.httpMethod = "DELETE"
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        self.networkSession.dataTask(request: request)
+            .onComplete {_ in 
+                return
+            }
     }
 }

@@ -110,7 +110,8 @@ class RestaurantTableViewController: UITableViewController {
         )
     }
 
-    func done() {
+    @objc
+    private func done() {
         self.router.dismissModal(navigationController: self.navigationController!, animated: true)
     }
 }

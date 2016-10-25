@@ -73,4 +73,11 @@ class NetworkRestaurantRepositoryTests: XCTestCase {
 
         self.waitForExpectations(timeout: 2, handler: nil)
     }
+
+    func test_deleteRestaurant_callsDataTask() {
+        self.repository.deleteRestaurant(id: 1)
+
+        XCTAssertTrue((self.networkSession.dataTaskArgs.url?.absoluteString.contains("1"))!)
+        XCTAssertEqual(self.networkSession.dataTaskArgs.httpMethod, "DELETE")
+    }
 }
