@@ -147,6 +147,20 @@ class RestaurantTableViewControllerTests: XCTestCase {
         XCTAssertTrue(self.router.pushScreenArg is NewRestaurantViewController)
     }
 
+    func test_setEditing_dismissDeleteButtonWhenEditingIsTrue() {
+        self.restaurantTableViewController.setEditing(true, animated: false)
+
+        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem!
+        XCTAssertFalse(rightButton.isEnabled)
+    }
+
+    func test_setEditing_enabledDeleteButtonWhenEditingIsFalse() {
+        self.restaurantTableViewController.setEditing(false, animated: false)
+
+        let rightButton = self.restaurantTableViewController.navigationItem.rightBarButtonItem!
+        XCTAssertTrue(rightButton.isEnabled)
+    }
+
     func test_deleteSpecificRestaurant_callsDeleteRestaurant() {
         self.restaurantTableViewController.restaurants = expectedRestaurants
         self.restaurantTableViewController.tableView(

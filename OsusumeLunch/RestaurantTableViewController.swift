@@ -79,6 +79,15 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
 
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if (editing) {
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+    }
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             let id = restaurants[indexPath.row].id
