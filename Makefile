@@ -1,6 +1,6 @@
 tests: bootstrap sort units printArt
 
-ci: units 
+ci: local-bootstrap sort units
 
 bootstrap:
 	@carthage bootstrap
@@ -10,6 +10,9 @@ bump:
 
 clean:
 	@xcodebuild -project OsusumeLunch.xcodeproj -scheme "OsusumeLunch" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 7" clean
+
+local-bootstrap:
+	@carthage bootstrap --platform iOS --no-use-binaries
 
 printArt:
 	@./bin/printArt.sh
