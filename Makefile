@@ -1,6 +1,9 @@
-tests: update sort units printArt
+tests: bootstrap sort units printArt
 
 ci: units 
+
+bootstrap:
+	@carthage bootstrap
 
 bump:
 	@./bin/bumpBuild.sh
